@@ -590,7 +590,9 @@ p {
 	-o-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
 }
-
+.mobile {
+	max-width: 300px;
+}
 .sticky {
 	position: fixed;
 	z-index: 99;
@@ -661,7 +663,11 @@ p {
 	transform: rotate(135deg);
 	top: -7px;
 }
-
+@media only screen and (max-width: 991px) {
+	.mobile {
+		max-width: 150px;
+	}
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.navbar-collapse {
 		position: absolute;
