@@ -607,6 +607,9 @@ p {
 .sticky .navbar {
 	padding: 10px 0;
 }
+.sticky img {
+	max-width: 150px;
+}
 
 .navbar {
 	padding: 25px 0;
