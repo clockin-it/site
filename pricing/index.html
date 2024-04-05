@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <title>clockin.it - pricing</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            main {
+                margin: 20px;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+                background-color: #e8f5e9; /* Light green background */
+            }
+            th {
+                background-color: #43a047; /* Darker green background */
+                color: white;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 45px;
+            }
+            .checkmark {
+                color: #43a047; /* Darker green checkmark */
+            }
+            .title {
+                text-align: center;
+                font-size: 24px;
+                margin-top: 0;
+                color: #333;
+                padding: 20px 0;
+            }
+            .feature-name {
+                text-align: left;
+                background-color: white; /* White background for feature names */
+            }
+            .implementation-table td {
+                text-align: left;
+            }
+            .price {
+                background-color: #f2f2f2;
+            }
+            .col-width49 {
+                width: 49%; /* This should be the same for all columns to divide table width equally */
+            }
+            .col-width17 {
+                width: 17%; /* This should be the same for all columns to divide table width equally */
+            }
+            .container {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 50%; /* Diminuir a largura do container */
+                max-width: 500px; /* Ajuste a largura máxima conforme necessário */
+                margin-left: auto; /* Centraliza horizontalmente */
+                margin-right: auto; /* Centraliza horizontalmente */
+            }
+            .form-container {
+                border: 2px solid #ddd;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                background: #ffffff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .form-group {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            .checkbox-group {
+                display: flex;
+                flex-direction: column; /* Colocar os checkboxes em coluna */
+                align-items: flex-start; /* Alinhar à esquerda */
+                margin-bottom: 10px;
+            }
+            .checkbox-group label {
+                margin-left: 5px;
+                margin-bottom: 7px; /* Espaçamento entre os checkboxes */
+            }
+
+            .logo {
+                height: 50px;
+                margin-right: 20px;
+            }
+            button {
+                padding: 10px 15px;
+                background-color: #43a047;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-left: auto; /* Botão alinhado à direita */
+            }
+            button:hover {
+                background-color: #367b34;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img
+                src="data:image/png;base64,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"
+                alt="clockin"
+                class="logo"
+            />
+            <h1>pricing table</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="form-container">
+                    <form id="calculationForm">
+                        <div class="form-group">
+                            <label for="userCount">Number of users:</label>
+                            <input
+                                type="number"
+                                id="userCount"
+                                value="5000"
+                                name="userCount"
+                                min="1"
+                                required
+                            />
+                        </div>
+                        <div class="form-group currency-select">
+                            <label for="currency">Currency:</label>
+                            <select id="currency" name="currency">
+                                <option value="USD" selected>USD</option>
+                                <option value="BRL">BRL</option>
+                            </select>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    id="integrationWFS"
+                                    checked="true"
+                                    name="integrationWFS"
+                                />
+                                <label for="integrationWFS"
+                                    >Integration with WFS</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    id="integrationEC"
+                                    name="integrationEC"
+                                />
+                                <label for="integrationEC"
+                                    >Integration with EC</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    id="integrationHCM"
+                                    name="integrationHCM"
+                                />
+                                <label for="integrationHCM"
+                                    >Integration with HCM on-premise</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    id="integrationECTime"
+                                    name="integrationECTime"
+                                />
+                                <label for="integrationECTime"
+                                    >Integration with EC-TM</label
+                                >
+                            </div>
+                        </div>
+
+                        <button type="submit">Check price</button>
+                    </form>
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <th class="col-width49">Feature</th>
+                    <th class="col-width17">Basic</th>
+                    <th class="col-width17">Standard</th>
+                    <th class="col-width17">Plus</th>
+                </tr>
+                <tr>
+                    <td class="feature-name">Portaria 671 ( Only Brazil )</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Web Application version</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Email support</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Live chat support</td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Offline capabilities</td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">
+                        Mobile (Android + iOS ) version
+                    </td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Windows version</td>
+                    <td></td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">App multi-user version</td>
+                    <td></td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Geofencing</td>
+                    <td></td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Push-up notification</td>
+                    <td></td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">App white label</td>
+                    <td></td>
+                    <td></td>
+                    <td class="checkmark">✔</td>
+                </tr>
+            </table>
+
+            <table class="implementation-table">
+                <tr class="price">
+                    <td class="col-width49">Implementation</td>
+                    <td class="col-width17" id="impl1"></td>
+                    <td class="col-width17" id="impl2"></td>
+                    <td class="col-width17" id="impl3"></td>
+                </tr>
+                <tr class="price">
+                    <td class="col-width49">
+                        Charged on a per-user, annual basis
+                    </td>
+                    <td id="monthly1"></td>
+                    <td id="monthly2"></td>
+                    <td id="monthly3"></td>
+                </tr>
+            </table>
+        </main>
+
+        <script>
+            document.getElementById("calculationForm").onsubmit = function (
+                event
+            ) {
+                event.preventDefault();
+
+                var userCount = document.getElementById("userCount").value;
+                var integrationWFS =
+                    document.getElementById("integrationWFS").checked;
+                var integrationEC =
+                    document.getElementById("integrationEC").checked;
+                var integrationHCM =
+                    document.getElementById("integrationHCM").checked;
+                var integrationECTime =
+                    document.getElementById("integrationECTime").checked;
+
+                var currency = document.getElementById("currency").value;
+
+                if (currency === "BRL") {
+                    currency = "R$";
+                }
+
+                var errorMessage = "";
+
+                if (
+                    integrationWFS ||
+                    integrationEC ||
+                    integrationHCM ||
+                    integrationECTime
+                ) {
+                    errorMessage = "";
+                } else {
+                    errorMessage = "At least one integration must be selected";
+                }
+
+                if (integrationWFS && integrationECTime) {
+                    errorMessage = "Invalid combination";
+                }
+
+                if (userCount < 1000) {
+                    errorMessage =
+                        "Please enter a minimum of 1000 users to check the price.";
+                }
+
+                if (errorMessage) {
+                    alert(errorMessage);
+                } else {
+                    //TO-DO Calc
+
+                    document.getElementById("monthly1").innerText =
+                        currency +
+                        " " +
+                        (calcularCusto(userCount) * 0.5).toFixed(2);
+                    document.getElementById("monthly2").innerText =
+                        currency +
+                        " " +
+                        Math.round(calcularCusto(userCount) * 0.7).toFixed(2);
+                    document.getElementById("monthly3").innerText =
+                        currency + " " + calcularCusto(userCount).toFixed(2);
+
+                    //implementation
+                    // alert(calcularCusto(userCount))
+
+                    let trueCount = [
+                        integrationWFS,
+                        integrationEC,
+                        integrationHCM,
+                        integrationECTime,
+                    ].filter(Boolean).length;
+
+                    // Define o valor inicial e o incremento
+                    var valorInicial = 40000; // R$ 40.000,00 como valor inicial
+                    var incremento = 20000; // Incremento de R$ 20.000,00
+
+                    // Calcula os valores com base no número de 'true'
+                    var valor1 = valorInicial + (trueCount - 1) * incremento; // Primeiro valor com base na contagem
+                    var valor2 = valor1 + incremento; // Segundo valor, adicionando o incremento
+                    var valor3 = valor2 + incremento; // Terceiro valor, adicionando o incremento novamente
+
+                    // Formata os valores para a moeda selecionada
+                    document.getElementById("impl1").innerText = formatCurrency(
+                        valor1,
+                        currency
+                    );
+                    document.getElementById("impl2").innerText = formatCurrency(
+                        valor2,
+                        currency
+                    );
+                    document.getElementById("impl3").innerText = formatCurrency(
+                        valor3,
+                        currency
+                    );
+                }
+            };
+
+            function calcularCusto(numeroDeEmpregados) {
+                // Limites e custos
+                const empregadosMin = 1000;
+                const empregadosMax = 15000;
+                const custoMin = 4; // Custo por empregado em 1000 empregados
+                const custoMax = 1; // Custo por empregado em 15000 empregados
+
+                // Calcular a e b baseado em uma abordagem logarítmica simplificada para este exemplo
+                const a = custoMin;
+                const b =
+                    (Math.log(custoMax) - Math.log(custoMin)) /
+                    (empregadosMax - empregadosMin);
+
+                // Calcular o custo por empregado para o número dado
+                let custoPorEmpregado;
+                if (numeroDeEmpregados <= empregadosMin) {
+                    custoPorEmpregado = custoMin;
+                } else if (numeroDeEmpregados >= empregadosMax) {
+                    custoPorEmpregado = custoMax;
+                } else {
+                    custoPorEmpregado = Math.exp(
+                        Math.log(a) + b * (numeroDeEmpregados - empregadosMin)
+                    );
+                }
+
+                var currency = document.getElementById("currency").value;
+
+                if (currency === "USD") {
+                    custoPorEmpregado = custoPorEmpregado / 5;
+                }
+
+                //alert(custoPorEmpregado);
+                // Arredondar para duas casas decimais
+                custoPorEmpregado = Math.round(custoPorEmpregado * 100) / 100;
+                // alert(custoPorEmpregado.toFixed(2));
+                return custoPorEmpregado * 12;
+            }
+
+            function formatCurrency(valor, currency) {
+                // Aqui você pode expandir a lógica de formatação com base na moeda
+                // Por simplicidade, vamos apenas retornar o valor formatado para BRL
+
+                if (currency == "USD") {
+                    valor = valor / 5;
+                }
+
+                return (
+                    currency +
+                    " " +
+                    valor.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")
+                );
+            }
+        </script>
+    </body>
+</html>
