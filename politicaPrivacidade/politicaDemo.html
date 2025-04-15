@@ -1,50 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <title>Política de Privacidade - clockin.it</title>
+    <script>
+        function changeLanguage(lang) {
+            var elements = document.getElementsByClassName('lang');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'none';
+            }
+            var selected = document.getElementsByClassName(lang);
+            for (var i = 0; i < selected.length; i++) {
+                selected[i].style.display = 'block';
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>Introdução</h1>
-    <p>Obrigado por escolher fazer parte da nossa comunidade no Clock In It. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade. Se você tiver quaisquer questões ou preocupações sobre esta política de privacidade ou nossas práticas com relação às suas informações pessoais, por favor, entre em contato conosco pelo e-mail <a href="mailto:policy@clockin.it">policy@clockin.it</a>.</p>
+<body onload="changeLanguage('en')">
 
-    <h2>Informações Que Coletamos</h2>
-    <p>Em nosso aplicativo <em>clockin.it Single Demo</em>, coletamos os seguintes tipos de informações:</p>
-    <ul>
-        <li><strong>Dados de Localização:</strong> Coletamos dados de localização para fornecer a funcionalidade do nosso serviço de marcação de ponto digital.</li>
-        <li><strong>ID do Dispositivo:</strong> Coletamos IDs de dispositivos para garantir o funcionamento adequado do nosso aplicativo em diversos dispositivos.</li>
-        <li><strong>Dados de ID Facial:</strong> Coletamos dados de identificação facial para fins de verificação de identidade.</li>
-        <li><strong>Permissões de Dispositivo:</strong> O acesso à câmera é utilizado para captura de fotos para reconhecimento facial e registros de pontos com foto. A localização exata é usada para registrar o local da marcação de ponto.</li>
-    </ul>
+    <div>
+        <label for="language-select">Choose a language:</label>
+        <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="es">Español</option>
+        </select>
+    </div>
 
-    <h2>Como Usamos Suas Informações</h2>
-    <p>Os dados coletados são tratados com base na execução de contrato (versão completa) ou consentimento do usuário (versão demo e funcionalidades específicas), conforme determina a LGPD. A coleta de dados sensíveis, como biometria facial, é estritamente realizada com base no consentimento explícito do usuário.</p>
-    <p>As informações que coletamos são usadas exclusivamente para fins de demonstração, incluindo:</p>
-    <ul>
-        <li>Verificação da identidade do usuário;</li>
-        <li>Garantia do funcionamento adequado do nosso aplicativo;</li>
-        <li>Sincronização de dados com nosso serviço de backend antes de serem posteriormente descartados.</li>
-    </ul>
+    <div class="lang en" style="display: none;">
+        <h1>Introduction</h1>
+        <p>Thank you for choosing to be part of our community at Clock In It. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy policy or our practices with regards to your personal information, please contact us at <a href="mailto:policy@clockin.it">policy@clockin.it</a>.</p>
 
-    <h2>Segurança dos Dados</h2>
-    <p>Priorizamos a segurança dos seus dados. Os dados que coletamos são armazenados com criptografia e compartilhados de forma segura com nosso serviço de backend. Implementamos uma variedade de medidas de segurança para manter a segurança de suas informações pessoais.</p>
+        <h2>Information We Collect</h2>
+        <p>In our <em>clockin.it Single Demo</em> application, we collect the following types of information:</p>
+        <ul>
+            <li><strong>Location Data:</strong> We collect location data to provide the functionality of our digital time clock service.</li>
+            <li><strong>Device ID:</strong> We collect device IDs to ensure the proper functioning of our application on various devices.</li>
+            <li><strong>Facial ID Data:</strong> We collect facial identification data for identity verification purposes.</li>
+            <li><strong>Device Permissions:</strong> Access to the camera is used for capturing photos for facial recognition and clock-in records with photos. Exact location is used to log the clock-in location.</li>
+        </ul>
 
-    <h2>Direitos dos Usuários</h2>
-    <p>Os usuários têm o direito de deletar seus dados. Para exercer este direito, os usuários podem gerenciar e deletar seus dados diretamente no aplicativo.</p>
+        <h2>How We Use Your Information</h2>
+        <p>The data collected is processed based on contract execution (full version) or user consent (demo version and specific features), as required by the LGPD. The collection of sensitive data, such as facial biometrics, is strictly based on the user's explicit consent.</p>
+        <p>The information we collect is used exclusively for demonstration purposes, including:</p>
+        <ul>
+            <li>User identity verification;</li>
+            <li>Ensuring the proper functioning of our application;</li>
+            <li>Synchronizing data with our backend service before it is subsequently discarded.</li>
+        </ul>
 
-    <h2>Não Compartilhamento com Terceiros</h2>
-    <p>Não compartilhamos nenhum dado coletado com terceiros. Suas informações são usadas exclusivamente para os propósitos declarados nesta política.</p>
+        <h2>Data Security</h2>
+        <p>We prioritize the security of your data. The data we collect is stored with encryption and securely shared with our backend service. We implement a variety of security measures to maintain the safety of your personal information.</p>
 
-    <h2>Restrição de Idade</h2>
-<p>Nosso aplicativo não possui restrição de idade. No entanto, encorajamos todos os usuários a estarem atentos à sua privacidade e segurança online.</p>
+        <h2>User Rights</h2>
+        <p>Users have the right to delete their data. To exercise this right, users can manage and delete their data directly in the application.</p>
 
-<h2>Contato</h2>
-<p>Para quaisquer preocupações relacionadas à privacidade, por favor, entre em contato conosco via e-mail em <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Estamos comprometidos em resolver quaisquer questões de privacidade que você possa ter.</p>
+        <h2>No Third-Party Sharing</h2>
+        <p>We do not share any collected data with third parties. Your information is used exclusively for the purposes stated in this policy.</p>
 
-<h2>Mudanças nesta Política</h2>
-<p>Podemos atualizar nossa Política de Privacidade de tempos em tempos. Notificaremos você sobre quaisquer mudanças ao publicar a nova Política de Privacidade nesta página. Você é aconselhado a revisar esta Política de Privacidade periodicamente para quaisquer alterações.</p>
+        <h2>Age Restriction</h2>
+        <p>Our application has no age restriction. However, we encourage all users to be mindful of their privacy and online security.</p>
 
-<p>Esta política reflete nosso compromisso com a transparência e a proteção dos dados pessoais de nossos usuários, estando em conformidade com as legislações nacionais e internacionais de proteção de dados. Ao utilizar nosso aplicativo, você concorda com a coleta, tratamento e uso de seus dados conforme descrito nesta política.</p>
+        <h2>Contact</h2>
+        <p>If you have any privacy-related concerns, please contact us via email at <a href="mailto:policy@clockin.it">policy@clockin.it</a>. We are committed to resolving any privacy issues you may have.</p>
 
-</body>
-</html>
+        <h2>Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you about any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <p>This policy reflects our commitment to transparency and the protection of our users' personal data, in compliance with national and international data protection laws. By using our application, you agree to the collection, processing, and use of your data as described in this policy.</p>
+    </div>
+
+    <div class="lang pt">
+        <h1>Introdução</h1>
+        <p>Obrigado por escolher fazer parte da nossa comunidade no Clock In It. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade. Se você tiver quaisquer questões ou preocupações sobre esta política de privacidade ou nossas práticas com relação às suas informações pessoais, por favor, entre em contato conosco pelo e-mail <a href="mailto:policy@clockin.it">policy@clockin.it</a>.</p>
+
+        <h2>Informações Que Coletamos</h2>
+        <p>Em nosso aplicativo <em>clockin.it Single Demo</em>, coletamos os seguintes tipos de informações:</p>
+        <ul>
+            <li><strong>Dados de Localização:</strong> Coletamos dados de localização para fornecer a funcionalidade do nosso serviço de marcação de ponto digital.</li>
+            <li><strong>ID do Dispositivo:</strong> Coletamos IDs de dispositivos para garantir o funcionamento adequado do nosso aplicativo em diversos dispositivos.</li>
+            <li><strong>Dados de ID Facial:</strong> Coletamos dados de identificação facial para fins de verificação de identidade.</li>
+            <li><strong>Permissões de Dispositivo:</strong> O acesso à câmera é utilizado para captura de fotos para reconhecimento facial e registros de pontos com foto. A localização exata é usada para registrar o local da marcação de ponto.</li>
+        </ul>
+
+        <h2>Como Usamos Suas Informações</h2>
+        <p>Os dados coletados são tratados com base na execução de contrato (versão completa) ou consentimento do usuário (versão demo e funcionalidades específicas), conforme determina a LGPD. A coleta de dados sensíveis, como biometria facial, é estritamente realizada com base no consentimento explícito do usuário.</p>
+        <p>As informações que coletamos são usadas exclusivamente para fins de demonstração, incluindo:</p>
+        <ul>
+            <li>Verificação da identidade do usuário;</li>
+            <li>Garantia do funcionamento adequado do nosso aplicativo;</li>
+            <li>Sincronização de dados com nosso serviço de backend antes de serem posteriormente descartados.</li>
+        </ul>
+
+        <h2>Segurança dos Dados</h2>
+        <p>Priorizamos a segurança dos seus dados. Os dados que coletamos são armazenados com criptografia e compartilhados de forma segura com nosso serviço de backend. Implementamos uma variedade de medidas de segurança para manter a segurança de suas informações pessoais.</p>
+
+        <h2>Direitos dos Usuários</h2>
+        <p>Os usuários têm o direito de deletar seus dados. Para exercer este direito, os usuários podem gerenciar e deletar seus dados diretamente no aplicativo.</p>
+
+        <h2>Não Compartilhamento com Terceiros</h2>
+        <p>Não compartilhamos nenhum dado coletado com terceiros. Suas informações são usadas exclusivamente para os propósitos declarados nesta política.</p>
+
+        <h2>Restrição de Idade</h2>
+        <p>Nosso aplicativo não possui restrição de idade. No entanto, encorajamos todos os usuários a estarem atentos à sua privacidade e segurança online.</p>
+
+        <h2>Contato</h2>
+        <p>Para quaisquer preocupações relacionadas à privacidade, por favor, entre em contato conosco via e-mail em <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Estamos comprometidos em resolver quaisquer questões de privacidade que você possa ter.</p>
+
+        <h2>Mudanças nesta Política</h2>
+        <p>Podemos atualizar nossa Política de Privacidade de tempos em tempos. Notificaremos você sobre quaisquer mudanças ao publicar a nova Política de Privacidade nesta página. Você é aconselhado a revisar esta Política de Privacidade periodicamente para quaisquer alterações.</p>
+
+        <p>Esta política reflete nosso compromisso com a transparência e a proteção dos dados pessoais de nossos usuários, estando em conformidade com as legislações nacionais e internacionais de proteção de dados. Ao utilizar nosso aplicativo, você concorda com a coleta, tratamento e uso de seus dados conforme descrito nesta política.</p>
+    </div>
+
+    <div class="lang es" style="display: none;">
+        <h1>Introducción</h1>
+        <p>Gracias por elegir ser parte de nuestra comunidad en Clock In It. Estamos comprometidos a proteger su información personal y su derecho a la privacidad. Si tiene alguna pregunta o inquietud sobre esta política de privacidad o nuestras prácticas con respecto a su información personal, por favor, póngase en contacto con nosotros en <a href="mailto:policy@clockin.it">policy@clockin.it</a>.
+            <h2>Información que Recopilamos</h2>
+            <p>En nuestra aplicación <em>clockin.it Single Demo</em>, recopilamos los siguientes tipos de información:</p>
+            <ul>
+                <li><strong>Datos de Ubicación:</strong> Recopilamos datos de ubicación para proporcionar la funcionalidad de nuestro servicio de reloj de tiempo digital.</li>
+                <li><strong>ID de Dispositivo:</strong> Recopilamos ID de dispositivos para garantizar el correcto funcionamiento de nuestra aplicación en varios dispositivos.</li>
+                <li><strong>Datos de Identificación Facial:</strong> Recopilamos datos de identificación facial con fines de verificación de identidad.</li>
+                <li><strong>Permisos del Dispositivo:</strong> El acceso a la cámara se utiliza para capturar fotos para el reconocimiento facial y los registros de entrada con fotos. La ubicación exacta se utiliza para registrar la ubicación de la entrada.</li>
+            </ul>
+        
+            <h2>Cómo Usamos Su Información</h2>
+            <p>Los datos recopilados se procesan en función de la ejecución del contrato (versión completa) o el consentimiento del usuario (versión demo y características específicas), según lo requiere la LGPD. La recopilación de datos sensibles, como la biometría facial, se realiza estrictamente sobre la base del consentimiento explícito del usuario.</p>
+            <p>La información que recopilamos se utiliza exclusivamente con fines de demostración, incluyendo:</p>
+            <ul>
+                <li>Verificación de la identidad del usuario;</li>
+                <li>Garantizar el correcto funcionamiento de nuestra aplicación;</li>
+                <li>Sincronización de datos con nuestro servicio backend antes de ser posteriormente descartados.</li>
+            </ul>
+        
+            <h2>Seguridad de los Datos</h2>
+            <p>Priorizamos la seguridad de sus datos. Los datos que recopilamos se almacenan con encriptación y se comparten de forma segura con nuestro servicio backend. Implementamos una variedad de medidas de seguridad para mantener la seguridad de su información personal.</p>
+        
+            <h2>Derechos de los Usuarios</h2>
+            <p>Los usuarios tienen el derecho de eliminar sus datos. Para ejercer este derecho, los usuarios pueden gestionar y eliminar sus datos directamente en la aplicación.</p>
+        
+            <h2>No Compartir con Terceros</h2>
+            <p>No compartimos ningún dato recopilado con terceros. Su información se utiliza exclusivamente para los propósitos declarados en esta política.</p>
+        
+            <h2>Restricción de Edad</h2>
+            <p>Nuestra aplicación no tiene restricción de edad. Sin embargo, alentamos a todos los usuarios a ser conscientes de su privacidad y seguridad en línea.</p>
+        
+            <h2>Contacto</h2>
+            <p>Si tiene alguna inquietud relacionada con la privacidad, por favor, póngase en contacto con nosotros por correo electrónico en <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Estamos comprometidos a resolver cualquier problema de privacidad que pueda tener.</p>
+        
+            <h2>Cambios en Esta Política</h2>
+            <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en esta página. Se le aconseja revisar esta Política de Privacidad periódicamente para cualquier cambio.</p>
+        
+            <p>Esta política refleja nuestro compromiso con la transparencia y la protección de los datos personales de nuestros usuarios, en cumplimiento con las leyes nacionales e internacionales de protección de datos. Al utilizar nuestra aplicación, usted acepta la recopilación, el procesamiento y el uso de sus datos como se describe en esta política.</p>
+        </div>
