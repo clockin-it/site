@@ -1,106 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Privacy Policy - clockin.it</title>
+		<title>Política de Privacidade - clockin.it</title>
+		<script>
+			function changeLanguage(lang) {
+				var elements = document.getElementsByClassName("lang");
+				for (var i = 0; i < elements.length; i++) {
+					elements[i].style.display = "none";
+				}
+				var selected = document.getElementsByClassName(lang);
+				for (var i = 0; i < selected.length; i++) {
+					selected[i].style.display = "block";
+				}
+			}
+		</script>
 	</head>
-	<body>
-		<h1>Introduction</h1>
-		<p>
-			Thank you for choosing to be part of our community at Clockin.it. We are committed to protecting personal information and the right to privacy. If you have any questions or concerns about
-			this privacy policy or our practices with regards to personal information, please contact us at <a href="mailto:policy@clockin.it">policy@clockin.it</a>.
-		</p>
+	<body onload="changeLanguage('pt')">
+		<div>
+			<label for="language-select">Escolha um idioma:</label>
+			<select id="language-select" onchange="changeLanguage(this.value)">
+				<option value="en">English</option>
+				<option value="pt" selected>Português</option>
+				<option value="es">Español</option>
+			</select>
+		</div>
 
-		<p>
-			This Privacy Policy describes how Clockin.it ("we," "us," or "our") collects, uses, and makes accessible information in connection with your use of our Clockin.it Register mobile
-			application (the "App"). This App is specifically designed for use by authorized personnel, such as HR Managers of our client companies ("Clients"), to register facial biometric data of
-			their employees ("Employees") for use within the Clockin.it time tracking system.
-		</p>
+		<div class="lang en" style="display: none">
+			<h1>Introduction</h1>
+			<p>
+				Thank you for choosing to be part of our community at Clockin.it. We are committed to protecting personal information and the right to privacy. If you have any questions or concerns
+				about this privacy policy or our practices with regards to personal information, please contact us at <a href="mailto:policy@clockin.it">policy@clockin.it</a>.
+			</p>
 
-		<p>
-			This policy primarily addresses the data processed through the App by the HR Manager. The handling of the Employee biometric data registered via this App is also governed by the privacy
-			policies applicable to the Clockin.it services used by the Employee (e.g., Clockin.it Single) and the Client's own privacy policies, as the Client is the data controller for their
-			Employee's data.
-		</p>
+			<p>
+				This Privacy Policy describes how Clockin.it ("we," "us," or "our") collects, uses, and makes accessible information in connection with your use of our Clockin.it Register mobile
+				application (the "App"). This App is specifically designed for use by authorized personnel, such as HR Managers of our client companies ("Clients"), to register facial biometric data
+				of their employees ("Employees") for use within the Clockin.it time tracking system.
+			</p>
 
-		<h2>Information We Collect</h2>
-		<p>We collect information necessary to provide the App's registration functionalities and to manage the biometric data within the Clockin.it ecosystem:</p>
-		<ul>
-			<li>
-				<strong>Information Collected or Provided via the App:</strong>
-				<ul>
-					<li>
-						<strong>Employee Photos:</strong> The core function of the App involves capturing or uploading photos of Employees. This requires in-app permission to access the device Camera
-						or Photo Gallery.
-					</li>
-					<li>
-						<strong>Biometric Data:</strong> We process the uploaded Employee photos using biometric recognition analysis to extract the facial landmarks and then generate corresponding
-						biometric data templates.
-					</li>
-					<li><strong>HR Manager Account Information:</strong> Basic information required to log in and use the App (provided by your employer/our Client).</li>
-				</ul>
-			</li>
-			<li>
-				<strong>Information Collected Automatically:</strong>
-				<ul>
-					<li><strong>Device Information:</strong> We may collect standard device information from the HR Manager's device, necessary for app functionality and security.</li>
-					<li><strong>Usage and Performance Data:</strong> We use tools like Firebase Crashlytics to collect crash reports and aggregated usage data.</li>
-					<li><strong>Advertising ID:</strong> The App requests access to the device's Advertising ID for analytics purposes.</li>
-				</ul>
-			</li>
-		</ul>
+			<p>
+				This policy primarily addresses the data processed through the App by the HR Manager. The handling of the Employee biometric data registered via this App is also governed by the
+				privacy policies applicable to the Clockin.it services used by the Employee (e.g., Clockin.it Single) and the Client's own privacy policies, as the Client is the data controller for
+				their Employee's data.
+			</p>
 
-		<h2>How We Use Your Information</h2>
-		<p>We use the collected information for the following specific purposes:</p>
-		<ul>
-			<li>To Register Employee Biometric Data</li>
-			<li>To Enable Biometric Verification</li>
-			<li>App Functionality and Security</li>
-			<li>App Improvement</li>
-			<li>Support</li>
-			<li>Compliance</li>
-		</ul>
+			<h2>Information We Collect</h2>
+			<p>We collect information necessary to provide the App's registration functionalities and to manage the biometric data within the Clockin.it ecosystem:</p>
+			<ul>
+				<li>
+					<strong>Information Collected or Provided via the App:</strong>
+					<ul>
+						<li>
+							<strong>Employee Photos:</strong> The core function of the App involves capturing or uploading photos of Employees. This requires in-app permission to access the device
+							Camera or Photo Gallery.
+						</li>
+						<li>
+							<strong>Biometric Data:</strong> We process the uploaded Employee photos using biometric recognition analysis to extract the facial landmarks and then generate
+							corresponding biometric data templates.
+						</li>
+						<li><strong>HR Manager Account Information:</strong> Basic information required to log in and use the App (provided by your employer/our Client).</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Information Collected Automatically:</strong>
+					<ul>
+						<li><strong>Device Information:</strong> We may collect standard device information from the HR Manager's device, necessary for app functionality and security.</li>
+						<li><strong>Usage and Performance Data:</strong> We use tools like Firebase Crashlytics to collect crash reports and aggregated usage data.</li>
+						<li><strong>Advertising ID:</strong> The App requests access to the device's Advertising ID for analytics purposes.</li>
+					</ul>
+				</li>
+			</ul>
 
-		<h2>Data Access and Sharing</h2>
-		<p>Handling of information, particularly Employee biometric data, is strictly controlled:</p>
-		<ul>
-			<li><strong>Storage and Access:</strong> Employee photos and biometric data templates are stored securely on Clockin.it's central servers.</li>
-			<li><strong>Availability within Clockin.it:</strong> The registered biometric data is made accessible through our secure platform to other authorized Clockin.it applications.</li>
-			<li><strong>Service Providers:</strong> We use third-party service providers for functions like cloud hosting and analytics.</li>
-			<li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect rights and safety.</li>
-		</ul>
+			<h2>How We Use Your Information</h2>
+			<p>We use the collected information for the following specific purposes:</p>
+			<ul>
+				<li>To Register Employee Biometric Data</li>
+				<li>To Enable Biometric Verification</li>
+				<li>App Functionality and Security</li>
+				<li>App Improvement</li>
+				<li>Support</li>
+				<li>Compliance</li>
+			</ul>
 
-		<h2>Data Security</h2>
-		<p>
-			We implement appropriate technical and organizational measures designed to protect the sensitive biometric information processed through this App against unauthorized access, loss, misuse,
-			or alteration.
-		</p>
+			<h2>Data Access and Sharing</h2>
+			<p>Handling of information, particularly Employee biometric data, is strictly controlled:</p>
+			<ul>
+				<li><strong>Storage and Access:</strong> Employee photos and biometric data templates are stored securely on Clockin.it's central servers.</li>
+				<li><strong>Availability within Clockin.it:</strong> The registered biometric data is made accessible through our secure platform to other authorized Clockin.it applications.</li>
+				<li><strong>Service Providers:</strong> We use third-party service providers for functions like cloud hosting and analytics.</li>
+				<li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect rights and safety.</li>
+			</ul>
 
-		<h2>Data Retention</h2>
-		<p>
-			Employee biometric data and photos are stored while the Employee is actively employed by the Client. After notification of dismissal or termination of access, this information will be
-			permanently removed from our systems within 5 days.
-		</p>
+			<h2>Data Security</h2>
+			<p>
+				We implement appropriate technical and organizational measures designed to protect the sensitive biometric information processed through this App against unauthorized access, loss,
+				misuse, or alteration.
+			</p>
 
-		<h2>Your Rights and Choices</h2>
-		<p>
-			HR Managers have rights regarding their account information and usage data. Employees have rights regarding their personal information, including biometric data. As the Client is the data
-			controller, Employees should direct requests regarding their data primarily to their employer's HR department.
-		</p>
+			<h2>Data Retention</h2>
+			<p>
+				Employee biometric data and photos are stored while the Employee is actively employed by the Client. After notification of dismissal or termination of access, this information will be
+				permanently removed from our systems within 5 days.
+			</p>
 
-		<h2>Children's Privacy</h2>
-		<p>
-			This App is not intended for the registration of individuals under the age of 16 or the relevant minimum age for employment. Clients are responsible for ensuring they have the necessary
-			consents or legal basis for registering Employee data.
-		</p>
+			<h2>Your Rights and Choices</h2>
+			<p>
+				HR Managers have rights regarding their account information and usage data. Employees have rights regarding their personal information, including biometric data. As the Client is the
+				data controller, Employees should direct requests regarding their data primarily to their employer's HR department.
+			</p>
 
-		<h2>Changes to This Privacy Policy</h2>
-		<p>We may update this Privacy Policy. We will notify Clients of significant changes. Continued use of the App after changes constitutes acceptance of the new policy.</p>
+			<h2>Children's Privacy</h2>
+			<p>
+				This App is not intended for the registration of individuals under the age of 16 or the relevant minimum age for employment. Clients are responsible for ensuring they have the
+				necessary consents or legal basis for registering Employee data.
+			</p>
 
-		<h2>Contact Us</h2>
-		<p>
-			If you have questions about this privacy policy, please contact us at <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Employees should contact their employer's HR department
-			first for inquiries about their data.
-		</p>
+			<h2>Changes to This Privacy Policy</h2>
+			<p>We may update this Privacy Policy. We will notify Clients of significant changes. Continued use of the App after changes constitutes acceptance of the new policy.</p>
+
+			<h2>Contact Us</h2>
+			<p>
+				If you have questions about this privacy policy, please contact us at <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Employees should contact their employer's HR department
+				first for inquiries about their data.
+			</p>
+		</div>
+
+		<div class="lang pt">
+			<h1>Introdução</h1>
+			<p>
+				Obrigado por escolher fazer parte da nossa comunidade no Clockin.it. Estamos comprometidos em proteger suas informações pessoais e seu direito à privacidade. Se você tiver quaisquer
+				questões ou preocupações sobre esta política de privacidade ou nossas práticas com relação às suas informações pessoais, por favor, entre em contato conosco pelo e-mail
+				<a href="mailto:policy@clockin.it">policy@clockin.it</a>.
+			</p>
+
+			<p>
+				Esta Política de Privacidade descreve como o Clockin.it ("nós", "nosso" ou "nossa") coleta, usa e disponibiliza informações em conexão com o uso do nosso aplicativo móvel Clockin.it
+				Register (o "App"). Este App é especificamente projetado para uso por pessoal autorizado, como Gerentes de RH de nossas empresas clientes ("Clientes"), para registrar dados biométricos
+				faciais de seus funcionários ("Funcionários") para uso dentro do sistema de controle de tempo Clockin.it.
+			</p>
+
+			<p>
+				Esta política aborda principalmente os dados processados através do App pelo Gerente de RH. O tratamento dos dados biométricos do Funcionário registrados via este App também é regido
+				pelas políticas de privacidade aplicáveis aos serviços Clockin.it utilizados pelo Funcionário (por exemplo, Clockin.it Single) e pelas próprias políticas de privacidade do Cliente, já
+				que o Cliente é o controlador dos dados de seus Funcionários.
+			</p>
+
+			<h2>Informações Que Coletamos</h2>
+			<p>Coletamos informações necessárias para fornecer as funcionalidades de registro do App e gerenciar os dados biométricos dentro do ecossistema Clockin.it:</p>
+			<ul>
+				<li>
+					<strong>Informações Coletadas ou Fornecidas via o App:</strong>
+					<ul>
+						<li>
+							<strong>Fotos dos Funcionários:</strong> A função principal do App envolve capturar ou fazer upload de fotos dos Funcionários. Isso requer permissão no app para acessar a
+							Câmera ou Galeria de Fotos do dispositivo.
+						</li>
+						<li>
+							<strong>Dados Biométricos:</strong> Processamos as fotos dos Funcionários usando análise de reconhecimento biométrico para extrair os pontos faciais e gerar os modelos de
+							dados biométricos correspondentes.
+						</li>
+						<li><strong>Informações da Conta do Gerente de RH:</strong> Informações básicas necessárias para fazer login e usar o App (fornecidas pelo seu empregador/nosso Cliente).</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Informações Coletadas Automaticamente:</strong>
+					<ul>
+						<li><strong>Informações do Dispositivo:</strong> Podemos coletar informações padrão do dispositivo do Gerente de RH, necessárias para funcionalidade e segurança do app.</li>
+						<li><strong>Dados de Uso e Desempenho:</strong> Usamos ferramentas como Firebase Crashlytics para coletar relatórios de falhas e dados de uso agregados.</li>
+						<li><strong>ID de Publicidade:</strong> O App solicita acesso ao ID de Publicidade do dispositivo para fins de análise.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h2>Como Usamos Suas Informações</h2>
+			<p>Usamos as informações coletadas para os seguintes propósitos específicos:</p>
+			<ul>
+				<li>Registrar Dados Biométricos dos Funcionários</li>
+				<li>Habilitar Verificação Biométrica</li>
+				<li>Funcionalidade e Segurança do App</li>
+				<li>Melhoria do App</li>
+				<li>Suporte</li>
+				<li>Conformidade</li>
+			</ul>
+
+			<h2>Acesso e Compartilhamento de Dados</h2>
+			<p>O tratamento de informações, particularmente dados biométricos dos Funcionários, é estritamente controlado:</p>
+			<ul>
+				<li><strong>Armazenamento e Acesso:</strong> As fotos dos Funcionários e os modelos de dados biométricos são armazenados com segurança nos servidores centrais do Clockin.it.</li>
+				<li>
+					<strong>Disponibilidade no Clockin.it:</strong> Os dados biométricos registrados são disponibilizados através de nossa plataforma segura para outros aplicativos Clockin.it
+					autorizados.
+				</li>
+				<li><strong>Provedores de Serviço:</strong> Utilizamos provedores terceiros para funções como hospedagem em nuvem e análise de dados.</li>
+				<li><strong>Requisitos Legais:</strong> Podemos divulgar informações se exigido por lei ou para proteger direitos e segurança.</li>
+			</ul>
+
+			<h2>Segurança dos Dados</h2>
+			<p>
+				Implementamos medidas técnicas e organizacionais apropriadas para proteger as informações biométricas sensíveis processadas através deste App contra acesso não autorizado, perda, uso
+				indevido ou alteração.
+			</p>
+
+			<h2>Retenção de Dados</h2>
+			<p>
+				Os dados biométricos e fotos dos Funcionários são armazenados enquanto o Funcionário estiver ativamente empregado pelo Cliente. Após a notificação de demissão ou término de necessidade
+				de acesso, estas informações serão permanentemente removidas de nossos sistemas dentro de 5 dias.
+			</p>
+
+			<h2>Seus Direitos e Escolhas</h2>
+			<p>
+				Os Gerentes de RH têm direitos sobre suas informações de conta e dados de uso. Os Funcionários têm direitos sobre suas informações pessoais, incluindo dados biométricos. Como o Cliente
+				é o controlador dos dados, os Funcionários devem direcionar solicitações sobre seus dados principalmente ao departamento de RH de seu empregador.
+			</p>
+
+			<h2>Privacidade de Crianças</h2>
+			<p>
+				Este App não é destinado ao registro de indivíduos menores de 16 anos ou da idade mínima relevante para emprego. Os Clientes são responsáveis por garantir que tenham os consentimentos
+				necessários ou base legal para registrar dados dos Funcionários.
+			</p>
+
+			<h2>Mudanças nesta Política</h2>
+			<p>Podemos atualizar esta Política de Privacidade. Notificaremos os Clientes sobre mudanças significativas. O uso contínuo do App após as mudanças constitui aceitação da nova política.</p>
+
+			<h2>Contato</h2>
+			<p>
+				Se você tiver dúvidas sobre esta política de privacidade, entre em contato conosco em <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Funcionários devem entrar em contato
+				primeiro com o departamento de RH de seu empregador para consultas sobre seus dados.
+			</p>
+		</div>
+
+		<div class="lang es" style="display: none">
+			<h1>Introducción</h1>
+			<p>
+				Gracias por elegir ser parte de nuestra comunidad en Clockin.it. Estamos comprometidos a proteger su información personal y su derecho a la privacidad. Si tiene alguna pregunta o
+				inquietud sobre esta política de privacidad o nuestras prácticas con respecto a su información personal, por favor contáctenos en
+				<a href="mailto:policy@clockin.it">policy@clockin.it</a>.
+			</p>
+
+			<p>
+				Esta Política de Privacidad describe cómo Clockin.it ("nosotros", "nos" o "nuestra") recopila, utiliza y hace accesible la información en conexión con su uso de nuestra aplicación
+				móvil Clockin.it Register (la "Aplicación"). Esta Aplicación está diseñada específicamente para ser utilizada por personal autorizado, como Gerentes de Recursos Humanos de las empresas
+				de nuestros clientes ("Clientes"), para registrar datos biométricos faciales de sus empleados ("Empleados") para su uso dentro del sistema de control de asistencia de Clockin.it.
+			</p>
+
+			<p>
+				Esta política aborda principalmente los datos procesados a través de la Aplicación por el Gerente de Recursos Humanos. El manejo de los datos biométricos del Empleado registrados a
+				través de esta Aplicación también se rige por las políticas de privacidad aplicables a los servicios de Clockin.it utilizados por el Empleado (por ejemplo, Clockin.it Single) y las
+				propias políticas de privacidad del Cliente, ya que el Cliente es el controlador de los datos de sus Empleados.
+			</p>
+
+			<h2>Información que Recopilamos</h2>
+			<p>Recopilamos la información necesaria para proporcionar las funcionalidades de registro de la Aplicación y para gestionar los datos biométricos dentro del ecosistema de Clockin.it:</p>
+			<ul>
+				<li>
+					<strong>Información Recopilada o Proporcionada a través de la Aplicación:</strong>
+					<ul>
+						<li>
+							<strong>Fotos de los Empleados:</strong> La función principal de la Aplicación implica capturar o cargar fotos de los Empleados. Esto requiere permiso dentro de la
+							aplicación para acceder a la Cámara o Galería de Fotos del dispositivo.
+						</li>
+						<li>
+							<strong>Datos Biométricos:</strong> Procesamos las fotos cargadas de los Empleados utilizando análisis de reconocimiento biométrico para extraer los puntos de referencia
+							faciales y luego generar las plantillas de datos biométricos correspondientes.
+						</li>
+						<li><strong>Información de la Cuenta del Gerente de Recursos Humanos:</strong> Información básica requerida para iniciar sesión y usar la Aplicación.</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Información Recopilada Automáticamente:</strong>
+					<ul>
+						<li>
+							<strong>Información del Dispositivo:</strong> Podemos recopilar información estándar del dispositivo del Gerente de Recursos Humanos, necesaria para la funcionalidad y
+							seguridad de la aplicación.
+						</li>
+						<li><strong>Datos de Uso y Rendimiento:</strong> Usamos herramientas como Firebase Crashlytics para recopilar informes de fallos y datos de uso agregados.</li>
+						<li><strong>ID de Publicidad:</strong> La Aplicación solicita acceso al ID de Publicidad del dispositivo para fines analíticos.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h2>Cómo Utilizamos Su Información</h2>
+			<p>Utilizamos la información recopilada para los siguientes fines específicos:</p>
+			<ul>
+				<li>Para Registrar Datos Biométricos de Empleados</li>
+				<li>Para Habilitar la Verificación Biométrica</li>
+				<li>Funcionalidad y Seguridad de la Aplicación</li>
+				<li>Mejora de la Aplicación</li>
+				<li>Soporte</li>
+				<li>Cumplimiento</li>
+			</ul>
+
+			<h2>Acceso y Compartición de Datos</h2>
+			<p>El manejo de la información, particularmente los datos biométricos de los Empleados, está estrictamente controlado:</p>
+			<ul>
+				<li>
+					<strong>Almacenamiento y Acceso:</strong> Las fotos de los Empleados y las plantillas de datos biométricos se almacenan de forma segura en los servidores centrales de Clockin.it.
+				</li>
+				<li>
+					<strong>Disponibilidad dentro de Clockin.it:</strong> Los datos biométricos registrados se hacen accesibles a través de nuestra plataforma segura a otras aplicaciones autorizadas
+					de Clockin.it.
+				</li>
+				<li><strong>Proveedores de Servicios:</strong> Utilizamos proveedores de servicios externos para funciones como alojamiento en la nube y análisis de datos.</li>
+				<li><strong>Requisitos Legales:</strong> Podemos divulgar información si así lo exige la ley o para proteger derechos y seguridad.</li>
+			</ul>
+
+			<h2>Seguridad de los Datos</h2>
+			<p>
+				Implementamos medidas técnicas y organizativas apropiadas diseñadas para proteger la información biométrica sensible procesada a través de esta Aplicación contra el acceso no
+				autorizado, pérdida, mal uso o alteración.
+			</p>
+
+			<h2>Retención de Datos</h2>
+			<p>
+				Los datos biométricos y fotos de los Empleados se almacenan mientras el Empleado esté activamente empleado por el Cliente. Después de la notificación de despido o terminación de
+				acceso, esta información será eliminada permanentemente de nuestros sistemas en un plazo de 5 días.
+			</p>
+
+			<h2>Sus Derechos y Opciones</h2>
+			<p>
+				Los Gerentes de Recursos Humanos tienen derechos sobre la información de su cuenta y los datos de uso. Los Empleados tienen derechos sobre su información personal, incluidos los datos
+				biométricos. Como el Cliente es el controlador de datos, los Empleados deben dirigir las solicitudes relativas a sus datos principalmente al departamento de Recursos Humanos de su
+				empleador.
+			</p>
+
+			<h2>Privacidad de los Menores</h2>
+			<p>
+				Esta Aplicación no está destinada al registro de personas menores de 16 años o la edad mínima relevante para el empleo. Los Clientes son responsables de asegurarse de que cuentan con
+				los consentimientos necesarios o la base legal para registrar los datos de los Empleados.
+			</p>
+
+			<h2>Cambios a Esta Política de Privacidad</h2>
+			<p>
+				Podemos actualizar esta Política de Privacidad. Notificaremos a los Clientes sobre cambios significativos. El uso continuado de la Aplicación después de los cambios constituye la
+				aceptación de la nueva política.
+			</p>
+
+			<h2>Contáctenos</h2>
+			<p>
+				Si tiene preguntas sobre esta política de privacidad, por favor contáctenos en <a href="mailto:policy@clockin.it">policy@clockin.it</a>. Los empleados deben contactar primero al
+				departamento de Recursos Humanos de su empleador para consultas sobre sus datos.
+			</p>
+		</div>
 	</body>
 </html>
