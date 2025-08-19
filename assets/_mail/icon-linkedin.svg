@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1024 1024"
+   style="position: relative; top: 5.2px; width: 15.6px;"
+   version="1.1"
+   id="svg1022"
+   sodipodi:docname="icon-linkedin.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/home/thiago/Documentos/togger/mail/icon-linkedin.png"
+   inkscape:export-xdpi="2.8099999"
+   inkscape:export-ydpi="2.8099999"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1026" />
+  <sodipodi:namedview
+     id="namedview1024"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.41210938"
+     inkscape:cx="-183.20379"
+     inkscape:cy="499.8673"
+     inkscape:window-width="2560"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1022" />
+  <rect
+     style="font-variation-settings:normal;vector-effect:none;fill:#008bd0;fill-opacity:1;stroke-width:41.9214;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;paint-order:stroke markers fill;stop-color:#000000"
+     id="rect1237"
+     width="1024"
+     height="1024"
+     x="0"
+     y="0"
+     ry="161.90802" />
+  <path
+     d="m 397.71406,367.76914 h 158.13047 v 81.83438 h 2.26094 c 22,-39.83829 75.85547,-81.83438 156.10859,-81.83438 C 881.13047,367.76914 912,472.67539 912,609.11602 V 887.00039 H 747.16953 V 640.65586 c 0,-58.75938 -1.1914,-134.33828 -85.73906,-134.33828 -85.84609,0 -98.94609,63.98984 -98.94609,130.07109 V 887.00039 H 397.71484 V 367.76992 Z m -285.71406,0 H 283.42891 V 886.99961 H 112 Z M 283.42891,223.53789 c 0,47.79375 -38.37579,86.53828 -85.71407,86.53828 -47.33828,0 -85.71406,-38.74453 -85.71406,-86.53828 0,-47.79375 38.37578,-86.53828 85.71406,-86.53828 47.33828,0 85.71407,38.74453 85.71407,86.53828 z"
+     fill="#ffffff"
+     id="path1020"
+     style="stroke-width:0.78125" />
+</svg>
