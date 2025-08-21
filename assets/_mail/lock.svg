@@ -6,8 +6,8 @@
    id="svg7"
    sodipodi:docname="lock.svg"
    inkscape:export-filename="lock.png"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    inkscape:version="1.4.2 (1:1.4.2+202505120737+ebf0e940d0)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,9 +24,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="77.533333"
-     inkscape:cx="5.8490972"
-     inkscape:cy="7.5"
+     inkscape:zoom="45.254834"
+     inkscape:cx="9.4686017"
+     inkscape:cy="10.109417"
      inkscape:window-width="2504"
      inkscape:window-height="1371"
      inkscape:window-x="2616"
@@ -50,9 +50,13 @@
      fill="#f39c12"
      id="path4" />
   <path
-     d="M1.703 5.487c-.249 0-.481.073-.686.146.157.653.747 1.109 1.418 1.098a1.48 1.48 0 0 0 1.441-1.244zm8.389-.073a1.16 1.16 0 0 1 .686.22c-.162.585-.735 1.098-1.417 1.098-.746 0-1.35-.585-1.441-1.317z"
-     fill="#7f8c8d"
-     id="path5" />
+     id="path8"
+     d="M 8.015625 5.4882812 C 8.139804 6.1815504 8.7273426 6.7226562 9.4453125 6.7226562 C 10.127182 6.7226563 10.699199 6.209857 10.861328 5.625 C 10.673489 5.5370027 10.463191 5.4882812 10.242188 5.4882812 L 8.015625 5.4882812 z "
+     style="fill:#7f8c8d;fill-opacity:1" />
+  <path
+     id="path5"
+     style="fill:#7f8c8d;fill-opacity:1"
+     d="M 1.4628906 5.4863281 C 1.3863737 5.4863281 1.3116277 5.4925222 1.2382812 5.5039062 C 1.1383377 5.522668 1.0409021 5.5503218 0.94921875 5.5800781 C 0.90620405 5.5962543 0.86520303 5.6147563 0.82421875 5.6347656 C 0.98493023 6.282238 1.572779 6.7335981 2.2402344 6.7226562 A 1.48 1.48 0 0 0 3.6796875 5.4863281 L 1.4628906 5.4863281 z " />
   <path
      d="M5.854.366c-2.425 0-4.39 1.902-4.39 4.39v.732a.76.76 0 0 0 .732.732.76.76 0 0 0 .732-.732v-.732c0-1.756 1.31-3.146 2.927-3.146S8.78 3 8.78 4.756v.732a.76.76 0 0 0 .732.732.76.76 0 0 0 .732-.732v-.732c0-2.488-1.965-4.39-4.39-4.39z"
      fill="#95a5a6"
