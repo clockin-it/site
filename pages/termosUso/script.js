@@ -99,7 +99,7 @@ const translations = {
         "footer.copyright": "© 2026 ClockIn.IT. Todos os direitos reservados.",
         "footer.privacy": "Política de Privacidade",
         "footer.terms": "Termos de Uso",
-        "footer.tutorial": "Tutorial"
+        "footer.tutorial": "Guia"
     },
 
     en: {
@@ -202,7 +202,7 @@ const translations = {
         "footer.copyright": "© 2026 ClockIn.IT. All rights reserved.",
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms of Use",
-        "footer.tutorial": "Tutorial"
+        "footer.tutorial": "Guide"
     },
 
     es: {
@@ -305,7 +305,7 @@ const translations = {
         "footer.copyright": "© 2026 ClockIn.IT. Todos los derechos reservados.",
         "footer.privacy": "Política de Privacidad",
         "footer.terms": "Términos de Uso",
-        "footer.tutorial": "Tutorial"
+        "footer.tutorial": "Guía"
     }
 };
 
