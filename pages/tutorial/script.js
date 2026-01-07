@@ -120,7 +120,8 @@ const translations = {
         // Footer
         "footer.copyright": "© 2026 ClockIn.IT. Todos os direitos reservados.",
         "footer.privacy": "Política de Privacidade",
-        "footer.terms": "Termos de Uso"
+        "footer.terms": "Termos de Uso",
+        "footer.tutorial": "Guía"
     },
 
     en: {
@@ -244,7 +245,8 @@ const translations = {
         // Footer
         "footer.copyright": "© 2026 ClockIn.IT. All rights reserved.",
         "footer.privacy": "Privacy Policy",
-        "footer.terms": "Terms of Use"
+        "footer.terms": "Terms of Use",
+        "footer.tutorial": "Guide"
     },
 
     es: {
@@ -368,7 +370,8 @@ const translations = {
         // Footer
         "footer.copyright": "© 2026 ClockIn.IT. Todos los derechos reservados.",
         "footer.privacy": "Política de Privacidad",
-        "footer.terms": "Términos de Uso"
+        "footer.terms": "Términos de Uso",
+        "footer.tutorial": "Guía"
     }
 };
 
@@ -416,7 +419,7 @@ function updateLanguageButtons() {
 }
 
 // Accordion Management
-function toggleAccordion(accordionId) {
+function toggleAccordion(accordionId, shouldScroll = false) {
     const accordionItem = document.querySelector(`[data-accordion="${accordionId}"]`);
     const allAccordions = document.querySelectorAll('.accordion-item');
 
@@ -427,11 +430,24 @@ function toggleAccordion(accordionId) {
         }
     });
 
-    // Toggle current accordion
-    accordionItem.classList.toggle('active');
+    // Open the accordion if it's not already active
+    if (!accordionItem.classList.contains('active')) {
+        accordionItem.classList.add('active');
+    }
 
     // Update URL with accordion state
     updateURLState(accordionId, accordionItem.classList.contains('active'));
+
+    // Smooth scroll to accordion if requested
+    if (shouldScroll) {
+        setTimeout(() => {
+            accordionItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, 100);
+    }
 }
 
 // URL State Management for Deep Linking
