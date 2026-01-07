@@ -50,7 +50,7 @@
                 <div class="hero-meta">
                     <div class="meta-item">
                         <span class="meta-icon">📅</span>
-                        <span data-i18n="hero.updated">Última atualização: Dezembro de 2025</span>
+                        <span data-i18n="hero.updated">Última atualização: Janeiro de 2026</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-icon">⚖️</span>
@@ -70,6 +70,13 @@
                         protegemos suas informações pessoais ao utilizar nosso sistema de Registro Eletrônico de Ponto
                         via Programa (REP-P).
                     </div>
+
+                    <p data-i18n="content.compliance">
+                        Esta política foi elaborada em estrita conformidade com a Lei Geral de Proteção de Dados
+                        Pessoais (Lei nº 13.709/2018 - <strong>LGPD</strong>) e a Portaria nº 671/2021 do Ministério
+                        do Trabalho e Previdência (MTP), refletindo nosso compromisso com a transparência e a
+                        legalidade.
+                    </p>
 
                     <!-- Section 1 -->
                     <h2 data-i18n="sec1.title">1. DEFINIÇÕES IMPORTANTES</h2>
@@ -97,6 +104,11 @@
                             produção, recepção, classificação, utilização, acesso, reprodução, transmissão,
                             distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle
                             da informação.</span></p>
+
+                    <p><strong data-i18n="sec1.dpo">1.6 Encarregado de Dados (DPO):</strong> <span
+                            data-i18n="sec1.dpo_desc">Pessoa indicada pelo controlador e operador para atuar como canal
+                            de comunicação entre o controlador, os titulares dos dados e a Autoridade Nacional de
+                            Proteção de Dados (ANPD).</span></p>
 
                     <!-- Section 2 -->
                     <h2 data-i18n="sec2.title">2. DADOS COLETADOS</h2>
@@ -155,7 +167,10 @@
                     <!-- Section 3 -->
                     <h2 data-i18n="sec3.title">3. FINALIDADE E BASE LEGAL DO TRATAMENTO</h2>
                     <p data-i18n="sec3.intro">O tratamento dos seus dados pessoais é realizado sempre fundamentado em
-                        uma base legal prevista na LGPD, conforme detalhado abaixo:</p>
+                        uma base legal prevista na LGPD, conforme detalhado na Tabela 1.</p>
+
+                    <p><strong data-i18n="sec3.table_title">Tabela 1</strong> – Finalidade e Base Legal do Tratamento de
+                        Dados</p>
 
                     <table>
                         <thead>
@@ -178,10 +193,12 @@
                                 <td>
                                     <strong data-i18n="table.row2_purpose">Identificação e Autenticação</strong><br>
                                     <span data-i18n="table.row2_desc">Garantir que quem está registrando o ponto é
-                                        realmente o colaborador.</span>
+                                        realmente o colaborador (login, biometria).</span>
                                 </td>
                                 <td data-i18n="table.row2_legal">Prevenção à Fraude e Segurança (Art. 11, II, g) e
-                                    Legítimo Interesse</td>
+                                    Legítimo Interesse. Nota: O tratamento de dados sensíveis (biometria) é realizado
+                                    com base no consentimento do titular (Art. 11, I) ou para prevenção à fraude (Art.
+                                    11, II, g).</td>
                             </tr>
                             <tr>
                                 <td>
@@ -213,81 +230,149 @@
                     <!-- Section 4 -->
                     <h2 data-i18n="sec4.title">4. COMPARTILHAMENTO DE DADOS</h2>
                     <p data-i18n="sec4.intro">A ClockInIT atua como Operadora e não comercializa seus dados pessoais. O
-                        compartilhamento de dados ocorre estritamente nas seguintes situações:</p>
+                        compartilhamento de dados ocorre estritamente nas seguintes situações e para as finalidades
+                        específicas. Não compartilhamos dados com terceiros não listados abaixo.</p>
                     <ul>
                         <li><strong data-i18n="sec4.employer">Com o Empregador (Controlador):</strong> <span
                                 data-i18n="sec4.employer_desc">Para a gestão da folha de pagamento, banco de horas,
                                 fiscalização interna e cumprimento das obrigações trabalhistas.</span></li>
                         <li><strong data-i18n="sec4.authorities">Autoridades Governamentais:</strong> <span
                                 data-i18n="sec4.authorities_desc">Compartilhamento obrigatório com o Ministério do
-                                Trabalho, Receita Federal (eSocial) e Justiça do Trabalho, quando exigido por
-                                lei.</span>
+                                Trabalho, Receita Federal (eSocial) e Justiça do Trabalho, quando exigido por lei,
+                                regulamento ou ordem judicial.</span>
                         </li>
                         <li><strong data-i18n="sec4.partners">Parceiros de Infraestrutura:</strong> <span
                                 data-i18n="sec4.partners_desc">Provedores de hospedagem em nuvem (ex: AWS, Google
-                                Cloud) que garantem a alta disponibilidade e segurança dos dados.</span></li>
+                                Cloud) que garantem a alta disponibilidade e segurança dos dados. Estes parceiros operam
+                                sob rigorosos contratos de confidencialidade e segurança, atuando como
+                                suboperadores.</span></li>
                     </ul>
 
                     <!-- Section 5 -->
-                    <h2 data-i18n="sec5.title">5. ARMAZENAMENTO E RETENÇÃO</h2>
-                    <p data-i18n="sec5.storage">Seus dados são armazenados em servidores seguros, que podem estar
+                    <h2 data-i18n="sec5.title">5. COOKIES</h2>
+                    <p data-i18n="sec5.intro">Utilizamos cookies e tecnologias similares exclusivamente para o
+                        funcionamento essencial do sistema REP-P:</p>
+                    <ul>
+                        <li><strong data-i18n="sec5.authentication">Autenticação:</strong> <span
+                                data-i18n="sec5.authentication_desc">Manter o Colaborador logado durante a
+                                navegação.</span></li>
+                        <li><strong data-i18n="sec5.security">Segurança:</strong> <span
+                                data-i18n="sec5.security_desc">Detectar e prevenir acessos suspeitos ou não
+                                autorizados.</span></li>
+                        <li><strong data-i18n="sec5.performance">Performance:</strong> <span
+                                data-i18n="sec5.performance_desc">Monitorar o desempenho técnico da aplicação.</span>
+                        </li>
+                    </ul>
+                    <p data-i18n="sec5.config">O Colaborador pode configurar seu navegador para recusar cookies,
+                        contudo, ressaltamos que isso pode comprometer o funcionamento correto e a segurança do sistema
+                        de registro de ponto.</p>
+
+                    <!-- Section 6 -->
+                    <h2 data-i18n="sec6.title">6. ARMAZENAMENTO E RETENÇÃO</h2>
+                    <p data-i18n="sec6.storage">Seus dados são armazenados em servidores seguros, que podem estar
                         localizados no Brasil ou no exterior. Nesses casos, garantimos que a transferência ocorra
                         apenas para países que proporcionem grau de proteção de dados adequado.</p>
 
                     <div class="highlight-box">
-                        <p><strong data-i18n="sec5.retention_title">Período de Retenção:</strong> <span
-                                data-i18n="sec5.retention_desc">Os dados de registro de ponto possuem prazos de guarda
+                        <p><strong data-i18n="sec6.retention_title">Período de Retenção:</strong> <span
+                                data-i18n="sec6.retention_desc">Os dados de registro de ponto possuem prazos de guarda
                                 definidos pela legislação trabalhista e fiscal, que geralmente se estendem por 5 (cinco)
                                 anos ou mais. Mesmo após o desligamento do Colaborador da empresa, esses registros são
-                                mantidos para o cumprimento dessas obrigações legais.</span></p>
+                                mantidos para o cumprimento dessas obrigações legais. Esses dados também podem ser
+                                preservados para cumprimento de ordem judicial, requerimento de autoridade
+                                administrativa competente ou previsão legal.</span></p>
                     </div>
 
-                    <!-- Section 6 -->
-                    <h2 data-i18n="sec6.title">6. SEGURANÇA DA INFORMAÇÃO</h2>
-                    <p data-i18n="sec6.intro">A ClockInIT adota as melhores práticas de segurança da informação do
-                        mercado para proteger os dados pessoais tratados, incluindo:</p>
-                    <ul>
-                        <li data-i18n="sec6.encryption">Criptografia de dados em trânsito (TLS/SSL) e em repouso.</li>
-                        <li data-i18n="sec6.access">Controles de acesso restritos, garantindo que apenas pessoal
-                            autorizado tenha acesso aos dados.</li>
-                        <li data-i18n="sec6.monitoring">Monitoramento contínuo de vulnerabilidades e implementação de
-                            correções imediatas.</li>
-                        <li data-i18n="sec6.backup">Backups frequentes para garantir a disponibilidade e recuperação dos
-                            dados.</li>
-                        <li data-i18n="sec6.signature">Assinatura digital dos registros de ponto para garantir sua
-                            integridade, autenticidade e não-repúdio.</li>
-                    </ul>
-
                     <!-- Section 7 -->
-                    <h2 data-i18n="sec7.title">7. SEUS DIREITOS (TITULAR DOS DADOS)</h2>
-                    <p data-i18n="sec7.intro">O Colaborador, na qualidade de Titular dos Dados, pode exercer os
-                        direitos previstos na LGPD perante o <strong>Controlador (seu Empregador)</strong> ou, quando
-                        aplicável, junto à ClockInIT. Os principais direitos incluem:</p>
+                    <h2 data-i18n="sec7.title">7. SEGURANÇA DA INFORMAÇÃO</h2>
+                    <p data-i18n="sec7.intro">A ClockInIT adota as melhores práticas de segurança da informação do
+                        mercado para proteger os dados pessoais tratados, não se limitando a:</p>
                     <ul>
-                        <li><strong data-i18n="sec7.access">Confirmação e Acesso:</strong> <span
-                                data-i18n="sec7.access_desc">Obter a confirmação da existência de tratamento e o acesso
-                                aos seus dados.</span></li>
-                        <li><strong data-i18n="sec7.correction">Correção:</strong> <span
-                                data-i18n="sec7.correction_desc">Solicitar a correção de dados cadastrais incompletos,
-                                inexatos ou desatualizados.</span></li>
-                        <li><strong data-i18n="sec7.deletion">Anonimização, Bloqueio ou Eliminação:</strong> <span
-                                data-i18n="sec7.deletion_desc">Solicitar a exclusão de dados desnecessários ou tratados
-                                em desconformidade com a lei.</span></li>
-                        <li><strong data-i18n="sec7.information">Informação:</strong> <span
-                                data-i18n="sec7.information_desc">Ser informado sobre as entidades públicas e privadas
-                                com as quais seus dados são compartilhados.</span></li>
+                        <li data-i18n="sec7.encryption">Criptografia de dados em trânsito (TLS/SSL) e em repouso.</li>
+                        <li data-i18n="sec7.access">Controles de acesso restritos, garantindo que apenas pessoal
+                            autorizado tenha acesso aos dados.</li>
+                        <li data-i18n="sec7.monitoring">Monitoramento contínuo de vulnerabilidades e implementação de
+                            correções imediatas.</li>
+                        <li data-i18n="sec7.backup">Backups frequentes para garantir a disponibilidade e recuperação dos
+                            dados.</li>
+                        <li data-i18n="sec7.signature">Assinatura digital dos registros de ponto para garantir sua
+                            integridade, autenticidade e não-repúdio, em conformidade com a Portaria 671/2021 do
+                            Ministério do Trabalho e Previdência.</li>
                     </ul>
 
                     <!-- Section 8 -->
-                    <h2 data-i18n="sec8.title">8. ALTERAÇÕES NESTA POLÍTICA</h2>
-                    <p data-i18n="sec8.desc">A ClockInIT reserva-se o direito de atualizar esta Política de Privacidade
+                    <h2 data-i18n="sec8.title">8. SEUS DIREITOS (TITULAR DOS DADOS)</h2>
+                    <p data-i18n="sec8.intro">O Colaborador, na qualidade de Titular dos Dados, pode exercer os
+                        direitos previstos na LGPD perante o <strong>Controlador (seu Empregador)</strong> ou, quando
+                        aplicável, junto à ClockInIT. Os principais direitos incluem:</p>
+                    <ul>
+                        <li><strong data-i18n="sec8.access">Confirmação e Acesso:</strong> <span
+                                data-i18n="sec8.access_desc">Obter a confirmação da existência de tratamento e o acesso
+                                aos seus dados.</span></li>
+                        <li><strong data-i18n="sec8.correction">Correção:</strong> <span
+                                data-i18n="sec8.correction_desc">Solicitar a correção de dados cadastrais incompletos,
+                                inexatos ou desatualizados.</span></li>
+                        <li><strong data-i18n="sec8.deletion">Anonimização, Bloqueio ou Eliminação:</strong> <span
+                                data-i18n="sec8.deletion_desc">Solicitar a exclusão de dados desnecessários ou tratados
+                                em desconformidade com a lei.</span>
+                            <div class="highlight-box" style="margin-top: 10px;">
+                                <p><strong data-i18n="sec8.deletion_note_title">Nota:</strong> <span
+                                        data-i18n="sec8.deletion_note">A eliminação completa dos dados poderá não ser
+                                        possível quando houver obrigações legais de guarda ou necessidade de manutenção
+                                        para fins de exercício de direitos.</span></p>
+                            </div>
+                        </li>
+                        <li><strong data-i18n="sec8.information">Informação:</strong> <span
+                                data-i18n="sec8.information_desc">Ser informado sobre as entidades públicas e privadas
+                                com as quais seus dados são compartilhados.</span></li>
+                    </ul>
+                    <p data-i18n="sec8.exercise">Para exercer quaisquer desses direitos, o Colaborador deverá entrar em
+                        contato com o setor de RH ou Departamento Pessoal do seu Empregador (Controlador). Em casos que
+                        envolvam diretamente a ClockInIT, o Colaborador também poderá contatar nosso Encarregado de
+                        Dados (seção 11).</p>
+
+                    <!-- Section 9 -->
+                    <h2 data-i18n="sec9.title">9. CRIANÇAS E ADOLESCENTES</h2>
+                    <p data-i18n="sec9.desc">A plataforma REP-P não é destinada a menores de 18 (dezoito) anos, salvo
+                        nos casos de contratação de jovens aprendizes ou outras formas de contrato de trabalho
+                        permitidas pela legislação brasileira. Quando aplicável, a coleta e o tratamento de dados de
+                        menores observarão rigorosamente as normas trabalhistas e de proteção de dados vigentes.</p>
+
+                    <!-- Section 10 -->
+                    <h2 data-i18n="sec10.title">10. ALTERAÇÕES NESTA POLÍTICA</h2>
+                    <p data-i18n="sec10.desc">A ClockInIT reserva-se o direito de atualizar esta Política de Privacidade
                         periodicamente. A versão mais recente estará sempre disponível na plataforma. O uso continuado
                         do serviço após a publicação de alterações implica a ciência e aceitação das novas condições.
                     </p>
 
-                    <!-- Contact Section -->
+                    <!-- Section 11 -->
+                    <!-- <div class="contact-box"> -->
+                    <h2 data-i18n="sec11.title">11. ENCARREGADO DE DADOS (DPO)</h2>
+                    <p data-i18n="sec11.intro">Nos termos da LGPD, a ClockInIT designou um Encarregado de Proteção
+                        de Dados Pessoais para atuar como canal de comunicação entre o Controlador, os Titulares e
+                        a Autoridade Nacional de Proteção de Dados (ANPD).</p>
+                    <div class="contact-item">
+                        <i class="lni lni-user"></i>
+                        <div>
+                            <strong data-i18n="sec11.name_label">Nome:</strong>
+                            <span data-i18n="sec11.name">Diogo da Silva de Paula</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="lni lni-envelope"></i>
+                        <div>
+                            <strong data-i18n="sec11.email_label">E-mail:</strong>
+                            <a href="mailto:depaulatrabalhos@gmail.com">depaulatrabalhos@gmail.com</a>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+
+                    <!-- Section 12 -->
                     <div class="contact-box">
-                        <h2 data-i18n="contact.title">9. CONTATO</h2>
+                        <h2 data-i18n="contact.title">12. CONTATO E INFORMAÇÕES INSTITUCIONAIS</h2>
+                        <p data-i18n="contact.intro_employer">Para questões relacionadas aos dados tratados pelo
+                            Controlador (Empregador), entre em contato diretamente com o setor de RH ou Departamento
+                            Pessoal da sua empresa.</p>
                         <p data-i18n="contact.intro">Para questões diretas com a ClockInIT (Operador), utilize os
                             seguintes canais:</p>
                         <div class="contact-item">
