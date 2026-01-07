@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Tutorial completo ClockIn-It - Guia passo a passo para configuração e uso do sistema" />
+    <title>ClockIn.It - Guia</title>
+
+    <link rel="shortcut icon" href="../assets/images/clockin/iconsSVG/icone.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="../assets/css/LineIcons.css" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="/index.html">
+                        <img src="../assets/images/clockin/iconsSVG/logo.svg" alt="Logo" />
+                    </a>
+                </div>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt" aria-label="Português">PT</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                    <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title" data-i18n="hero.title">Guia Completo do <span class="highlight">ClockIn.IT</span>
+                </h2>
+                <p class="hero-description" data-i18n="hero.description">Configure seu sistema de ponto eletrônico em
+                    minutos com nosso tutorial passo a passo</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToAccordions()" data-i18n="hero.btn_start">Começar
+                        Tutorial</button>
+                    <!-- <a href="mailto:suporte@clockin.com" class="btn btn-secondary" data-i18n="hero.btn_support">Suporte
+                        Técnico</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Accordions Section -->
+        <section class="accordions-section" id="accordions">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-line"></div>
+                    <h2 data-i18n="section.title">Como Configurar o Sistema</h2>
+                    <p data-i18n="section.description">Siga os passos organizados abaixo para configurar e usar o
+                        ClockIn.IT</p>
+                </div>
+
+                <div class="accordion-container">
+                    <!-- Accordion 1: Cadastro de Empresa -->
+                    <div class="accordion-item" data-accordion="company">
+                        <div class="accordion-header" onclick="toggleAccordion('company')">
+                            <div class="accordion-icon">🏭</div>
+                            <div class="accordion-title-section">
+                                <h3 class="accordion-title" data-i18n="acc1.title">Cadastro de Empresa [RH]</h3>
+                                <p class="accordion-subtitle" data-i18n="acc1.subtitle">Cadastre a estrutura
+                                    organizacional da empresa</p>
+                            </div>
+                            <!-- <div class="accordion-share" onclick="shareAccordion(event, 'company')"
+                                title="Compartilhar link">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span class="share-tooltip">Copiar link</span>
+                            </div> -->
+                            <div class="accordion-toggle">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="steps-container">
+                                    <!-- Step 1 -->
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🏛️</span>
+                                                <span data-i18n="acc1.step1.title">Criar Holding</span>
+                                                <span>
+                                                    <a href="https://admin.dev.clockin.it/#/v1/etr/holding/create"
+                                                        target="_blank">
+                                                        <strong>link</strong>
+                                                    </a>
+                                                </span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc1.step1.desc">
+                                                A Holding é o nível mais alto da hierarquia. Aqui você pode definir
+                                                configurações gerais de ponto que serão herdadas por toda a organização,
+                                                ou deixar que o sistema use as configurações padrão.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>📋</span>
+                                                    <span data-i18n="acc1.step1.info_title">O que configurar:</span>
+                                                </div>
+                                                <ul class="step-list">
+                                                    <li data-i18n="acc1.step1.info1">Nome da Holding</li>
+                                                    <li data-i18n="acc1.step1.info2">Configuração de ponto (opcional -
+                                                        se não definida, usa padrão do sistema)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🏷️</span>
+                                                <span data-i18n="acc1.step2.title">Criar Marca</span>
+                                                <span>
+                                                    <a href="https://admin.dev.clockin.it/#/v1/etr/brand/create"
+                                                        target="_blank">
+                                                        <strong>link</strong>
+                                                    </a>
+                                                </span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc1.step2.desc">
+                                                A Brand representa a marca ou divisão dentro da Holding. É útil para
+                                                empresas que possuem múltiplas marcas ou divisões de negócio.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3 -->
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🏢</span>
+                                                <span data-i18n="acc1.step3.title">Criar Empresa</span>
+                                                <span>
+                                                    <a href="https://admin.dev.clockin.it/#/v1/etr/company/main/create"
+                                                        target="_blank">
+                                                        <strong>link</strong>
+                                                    </a>
+                                                </span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc1.step3.desc">Aqui você define os
+                                                dados da empresa que utilizará o sistema de ponto.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 4 -->
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🏭</span>
+                                                <span data-i18n="acc1.step4.title">Criar Unidade Organizacional</span>
+                                                <span>
+                                                    <a href="https://admin.dev.clockin.it/#/v1/etr/organizational_unit/create"
+                                                        target="_blank">
+                                                        <strong>link</strong>
+                                                    </a>
+                                                </span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc1.step4.desc">
+                                                A Unidade Organizacional representa filiais, escritórios ou localizações
+                                                físicas da empresa. Cada unidade pode ter seus próprios departamentos e
+                                                colaboradores.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 5 -->
+                                    <div class="step-item">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">📁</span>
+                                                <span data-i18n="acc1.step5.title">Criar Departamento</span>
+                                                <span>
+                                                    <a href="https://admin.dev.clockin.it/#/v1/etr/department/create"
+                                                        target="_blank">
+                                                        <strong>link</strong>
+                                                    </a>
+                                                </span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc1.step5.desc">
+                                                O Departamento é onde você agrupa colaboradores por área de atuação (RH,
+                                                TI, Vendas, etc.). Cada departamento pertence a uma unidade
+                                                organizacional.
+                                            </p>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">✅</span>
+                                                <p class="step-highlight-text" data-i18n="acc1.step5.highlight">
+                                                    Pronto! Sua estrutura organizacional está completa. Agora você pode
+                                                    cadastrar os colaboradores.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 2: Cadastro de Empregado -->
+                    <div class="accordion-item" data-accordion="employee">
+                        <div class="accordion-header" onclick="toggleAccordion('employee')">
+                            <div class="accordion-icon">👥</div>
+                            <div class="accordion-title-section">
+                                <h3 class="accordion-title" data-i18n="acc2.title">Configuração de Grupo de
+                                    Colaboradores [RH]</h3>
+                                <p class="accordion-subtitle" data-i18n="acc2.subtitle">Cadastre colaboradores e
+                                    organize em grupos</p>
+                            </div>
+                            <!-- <div class="accordion-share" onclick="shareAccordion(event, 'employee')"
+                                title="Compartilhar link">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span class="share-tooltip">Copiar link</span>
+                            </div> -->
+                            <div class="accordion-toggle">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="steps-container">
+                                    <!-- Step 1 -->
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">👤</span>
+                                                <span data-i18n="acc2.step1.title">Criar Colaborador</span>
+                                                <span><a href="https://admin.dev.clockin.it/#/v1/etr/employee/main/create"
+                                                        target="_blank">
+                                                        <strong> link </strong>
+                                                    </a></span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc2.step1.desc">
+                                                Cadastre cada colaborador no sistema com suas informações pessoais e
+                                                profissionais. Você pode fornecer uma configuração de ponto específica
+                                                para o
+                                                colaborador, ou ele herdará a configuração do grupo de colaboradores.
+                                            </p>
+                                            <!-- <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>📝</span>
+                                                    <span data-i18n="acc2.step1.info_title">Dados necessários:</span>
+                                                </div>
+                                                <ul class="step-list">
+                                                    <li data-i18n="acc2.step1.info1">Nome completo do colaborador</li>
+                                                    <li data-i18n="acc2.step1.info2">Email corporativo</li>
+                                                    <li data-i18n="acc2.step1.info3">ID pessoal ou matrícula</li>
+                                                    <li data-i18n="acc2.step1.info4">Departamento ao qual pertence</li>
+                                                    <li data-i18n="acc2.step1.info5">Configuração de ponto (opcional -
+                                                        herda do grupo se não definida)</li>
+                                                </ul>
+                                            </div> -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">👨‍👩‍👧‍👦</span>
+                                                <span data-i18n="acc2.step2.title">Criar Grupo de Colaboradores</span>
+                                                <span><a href="https://admin.dev.clockin.it/#/v1/etr/employees_group/create"
+                                                        target="_blank">
+                                                        <strong> link </strong>
+                                                    </a></span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc2.step2.desc">
+                                                Os grupos de colaboradores permitem organizar colaboradores que
+                                                compartilham as mesmas regras de ponto. Cada grupo pode ter sua própria
+                                                configuração
+                                                de ponto ou herdar da Holding.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>ℹ️</span>
+                                                    <span data-i18n="acc2.step2.info_title">Importante saber:</span>
+                                                </div>
+                                                <ul class="step-list">
+                                                    <!-- <li data-i18n="acc2.step2.info1">Agrupe colaboradores com horários
+                                                        similares</li> -->
+                                                    <li data-i18n="acc2.step2.info2">Configure regras de ponto
+                                                        específicas (opcional)</li>
+                                                    <li data-i18n="acc2.step2.info3">Se não configurado, usa as regras
+                                                        da Holding</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 3: Cadastro de Coletor Múltiplo -->
+                    <div class="accordion-item" data-accordion="collectorMultiple">
+                        <div class="accordion-header" onclick="toggleAccordion('collectorMultiple')">
+                            <div class="accordion-icon">🖥️</div>
+                            <div class="accordion-title-section">
+                                <h3 class="accordion-title" data-i18n="acc3.title">Cadastro de Coletor Quiosque [RH]
+                                </h3>
+                                <p class="accordion-subtitle" data-i18n="acc3.subtitle">Cadastre o coletor e ative ele
+                                    no app multiple</p>
+                            </div>
+                            <!-- <div class="accordion-share" onclick="shareAccordion(event, 'collectorMultiple')"
+                                title="Compartilhar link">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span class="share-tooltip">Copiar link</span>
+                            </div> -->
+                            <div class="accordion-toggle">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="steps-container">
+                                    <!-- Step 1 -->
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">📱</span>
+                                                <span data-i18n="acc3.step1.title">Criar Coletor Múltiplo</span>
+                                                <span><a href="https://admin.dev.clockin.it/#/v1/etr/collector_multiple/create"
+                                                        target="_blank">
+                                                        <strong> link </strong>
+                                                    </a></span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc3.step1.desc">
+                                                Você pode criar um Coletor Múltiplo associando um grupo de colaboradores
+                                                existente. O sistema irá gerar um código único que permite ativar o app
+                                                ClockIn Multiple.
+                                            </p>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">🔑</span>
+                                                <p class="step-highlight-text" data-i18n="acc3.step3.highlight">
+                                                    Atenção: Guarde o código gerado! Ele será necessário para configurar
+                                                    o app Clockin Multiple onde os colaboradores registrarão seus
+                                                    pontos.
+                                                </p>
+                                            </div>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>⏰</span>
+                                                    <span data-i18n="acc3.step3.info_title">Sobre o código:</span>
+                                                </div>
+                                                <ul class="step-list">
+                                                    <li data-i18n="acc3.step3.info1">O código tem validade de 1 hora
+                                                    </li>
+                                                    <li data-i18n="acc3.step3.info2">Se expirar, crie um novo coletor
+                                                        múltiplo</li>
+                                                    <li data-i18n="acc3.step3.info3">Um código pode ser usado somente em
+                                                        um dispositivo</li>
+                                                    <li>Para ter mais dispositivos, crie múltiplos coletores e vincule
+                                                        eles ao mesmo grupo de colaboradores</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🔓</span>
+                                                <span data-i18n="acc3.step2.title">Ativar o Coletor Quiosque no App
+                                                    Clockinit Multi</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc3.step2.desc">
+                                                O app Clockinit Multi é onde os colaboradores registram seus pontos
+                                                usando reconhecimento facial. Este app deve ser instalado em um
+                                                dispositivo
+                                                compartilhado (tablet ou celular) que ficará no local de trabalho.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>📥</span>
+                                                    <span data-i18n="acc3.step2.info_title">Como ativar o Coletor
+                                                        Multiple:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li>
+                                                        <span data-i18n="acc3.step2.info1">Baixe o app "Clockin
+                                                            Multi" na Play Store</span>
+                                                        <a href="https://play.google.com/store/apps/details?id=it.clockin.multi"
+                                                            target="_blank" rel="noopener noreferrer"
+                                                            aria-label="Download Clockinit Multiple">link</a>
+                                                    </li>
+                                                    <li data-i18n="acc3.step2.info2">Abra o app pela primeira vez</li>
+                                                    <li data-i18n="acc3.step2.info3">Insira o código do Coletor Múltiplo
+                                                        (gerado no painel administrativo)</li>
+                                                    <li data-i18n="acc3.step2.info4">O app será ativado e sincronizado
+                                                        com o grupo de colaboradores</li>
+                                                </ul>
+                                            </div>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">⚠️</span>
+                                                <p class="step-highlight-text" data-i18n="acc3.step3.highlight">
+                                                    Lembre-se: O código do Coletor Múltiplo expira em 1 hora. Se o
+                                                    código expirar, você deve criar um novo coletor no painel
+                                                    administrativo na web,
+                                                    na seção de Coletores Múltiplos.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 4: Cadastro de Face de Colaborador -->
+                    <div class="accordion-item" data-accordion="faceEmployee">
+                        <div class="accordion-header" onclick="toggleAccordion('faceEmployee')">
+                            <div class="accordion-icon">📸</div>
+                            <div class="accordion-title-section">
+                                <h3 class="accordion-title" data-i18n="acc4.title">Cadastro de face de Colaborador [RH]
+                                </h3>
+                                <p class="accordion-subtitle" data-i18n="acc4.subtitle">Cadastre a face do colaborador e
+                                    Sincronize no app multiple</p>
+                            </div>
+                            <!-- <div class="accordion-share" onclick="shareAccordion(event, 'faceEmployee')"
+                                title="Compartilhar link">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span class="share-tooltip">Copiar link</span>
+                            </div> -->
+                            <div class="accordion-toggle">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="steps-container">
+                                    <!-- Step 1 -->
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">📸</span>
+                                                <span data-i18n="acc4.step1.title">Cadastro de Foto - App
+                                                    Register</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc4.step1.desc">
+                                                Para colaboradores que vão utilizar o app Multiple (reconhecimento
+                                                facial), é necessário cadastrar fotos do rosto no sistema. Este processo
+                                                pode ser feito no app Register.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>📥</span>
+                                                    <span data-i18n="acc4.step1.info_title">Usando o App
+                                                        Register:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li>
+                                                        <span data-i18n="acc4.step1.info1">Baixe o app "Clockin
+                                                            Register" na Play Store</span>
+                                                        <a href="https://play.google.com/store/apps/details?id=it.clockin.register"
+                                                            target="_blank" rel="noopener noreferrer"
+                                                            aria-label="Download Clockin Register">link</a>
+                                                    </li>
+                                                    <li data-i18n="acc4.step1.info2">Deve ser um Administrador de
+                                                        Recursos Humanos para poder cadastrar as imagens</li>
+                                                    <li data-i18n="acc4.step1.info2">Abra o app e insira o código da
+                                                        Holding</li>
+                                                    <li data-i18n="acc4.step1.info3">Digite seu email ou ID pessoal
+                                                        (matrícula)</li>
+                                                    <li data-i18n="acc4.step1.info4">Um email com código de ativação
+                                                        será enviado para o email do colaborador</li>
+                                                    <li data-i18n="acc4.step1.info5">Insira o código recebido por email
+                                                    </li>
+                                                    <li data-i18n="acc4.step1.info6">Defina sua senha de acesso</li>
+                                                </ul>
+                                            </div>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">💡</span>
+                                                <p class="step-highlight-text" data-i18n="acc4.step1.highlight">
+                                                    Importante: Use boa iluminação e tire fotos de frente. Evite usar
+                                                    óculos escuros, bonés ou qualquer acessório que cubra o rosto para
+                                                    garantir
+                                                    melhor reconhecimento facial.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">🔄</span>
+                                                <span data-i18n="acc4.step2.title">Sincronizar Face IDs</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc4.step2.desc">
+                                                Depois que os colaboradores cadastrarem suas fotos no app Register, é
+                                                necessário sincronizar essas informações com o app Multiple para que o
+                                                reconhecimento facial funcione.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>🔄</span>
+                                                    <span data-i18n="acc4.step2.info_title">Como sincronizar:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li data-i18n="acc4.step2.info1">Abra o app Clockinit Multi no
+                                                        dispositivo coletor</li>
+                                                    <li data-i18n="acc4.step2.info2">Toque no menu no canto superior
+                                                        esquerdo (☰)</li>
+                                                    <li data-i18n="acc4.step2.info3">Selecione a opção "Sincronizar Base
+                                                        Face IDs"</li>
+                                                    <li data-i18n="acc4.step2.info4">Aguarde o download das informações
+                                                        faciais</li>
+                                                    <li data-i18n="acc4.step2.info5">Pronto! Agora os colaboradores
+                                                        podem bater ponto com reconhecimento facial</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 3 -->
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">✅</span>
+                                                <span data-i18n="acc4.step3.title">Registrar Ponto</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc4.step3.desc">
+                                                Com tudo configurado, os colaboradores já podem registrar seus pontos de
+                                                entrada e saída usando o reconhecimento facial no app Clockinit Multi.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>👤</span>
+                                                    <span data-i18n="acc4.step3.info_title">Como bater ponto:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li data-i18n="acc4.step3.info1">Aproxime-se do dispositivo com o
+                                                        app ClockIn Multi</li>
+                                                    <li data-i18n="acc4.step3.info2">Posicione seu rosto na frente da
+                                                        câmera</li>
+                                                    <li data-i18n="acc4.step3.info3">O sistema reconhecerá
+                                                        automaticamente seu rosto</li>
+                                                    <li data-i18n="acc4.step3.info4">
+                                                        Confirme o tipo de registro (entrada ou saída, esta opção
+                                                        aparecerá se estiver ativada na configuração do ponto)
+                                                    </li>
+                                                    <li data-i18n="acc4.step3.info5">Ponto registrado com sucesso!</li>
+                                                </ul>
+                                            </div>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">🎉</span>
+                                                <p class="step-highlight-text" data-i18n="acc4.step3.highlight">
+                                                    Parabéns! Seu sistema Clockin.It está completamente configurado e
+                                                    funcionando. Os registros de ponto podem ser visualizados e
+                                                    gerenciados através do painel administrativo na web.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion 5: Cadastro de Coletor Individual -->
+                    <div class="accordion-item" data-accordion="collectorSingle">
+                        <div class="accordion-header" onclick="toggleAccordion('collectorSingle')">
+                            <div class="accordion-icon">📱</div>
+                            <div class="accordion-title-section">
+                                <h3 class="accordion-title" data-i18n="acc5.title">Cadastro de Coletor Individual
+                                    [COLABORADOR]</h3>
+                                <p class="accordion-subtitle" data-i18n="acc5.subtitle">Ative a conta e comece a
+                                    registrar pontos</p>
+                            </div>
+                            <!-- <div class="accordion-share" onclick="shareAccordion(event, 'collectorSingle')"
+                                title="Compartilhar link">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span class="share-tooltip">Copiar link</span>
+                            </div> -->
+                            <div class="accordion-toggle">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="steps-container">
+                                    <!-- Step 1 -->
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">📲</span>
+                                                <span data-i18n="acc5.step1.title">Primeiro Acesso - App Clockinit
+                                                    Single</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc5.step1.desc">
+                                                Depois de criado o usuário no sistema, o colaborador pode fazer o
+                                                primeiro acesso através do app Clockinit Single. Este app permite que
+                                                cada
+                                                colaborador ative sua própria conta de forma individual, podendo assim
+                                                bater o ponto com seu dispositivo móvel.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>📥</span>
+                                                    <span data-i18n="acc5.step1.info_title">Como fazer o primeiro
+                                                        acesso:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li>
+                                                        <span data-i18n="acc5.step1.info1">Baixe o app "Clockinit
+                                                            Single"
+                                                            na Play Store</span>
+                                                        <a href="https://play.google.com/store/apps/details?id=it.clockin.single"
+                                                            target="_blank" rel="noopener noreferrer"
+                                                            aria-label="Download Clockin Single">link</a>
+                                                    </li>
+                                                    <li data-i18n="acc5.step1.info2">Abra o app e insira o código da
+                                                        Holding</li>
+                                                    <li data-i18n="acc5.step1.info3">Digite seu email ou ID pessoal
+                                                        (matrícula)</li>
+                                                    <li data-i18n="acc5.step1.info4">Um email com código de ativação
+                                                        será enviado para o email do colaborador</li>
+                                                    <li data-i18n="acc5.step1.info5">Insira o código recebido por email
+                                                    </li>
+                                                    <li data-i18n="acc5.step1.info6">Defina sua senha de acesso</li>
+                                                </ul>
+                                            </div>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">💡</span>
+                                                <p class="step-highlight-text" data-i18n="acc5.step1.highlight">Dica:
+                                                    Guarde bem sua senha! Ela será usada para acessar os aplicativos
+                                                    Clockin.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Step 2 -->
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4 class="step-title">
+                                                <span class="step-title-icon">✅</span>
+                                                <span data-i18n="acc5.step2.title">Registrar Ponto</span>
+                                            </h4>
+                                            <p class="step-description" data-i18n="acc5.step2.desc">
+                                                Com tudo configurado, o colaborador já pode registrar seus pontos de
+                                                entrada e saída usando as diversas maneiras que o app Clockinit Single
+                                                oferece.
+                                            </p>
+                                            <div class="step-info-card">
+                                                <div class="step-info-title">
+                                                    <span>👤</span>
+                                                    <span data-i18n="acc5.step2.info_title">Como bater ponto:</span>
+                                                </div>
+                                                <ul class="step-list numbered">
+                                                    <li data-i18n="acc5.step2.info1">Selecione a opção de registro
+                                                        desejada entrada ou saída</li>
+                                                    <li data-i18n="acc5.step2.info2">Selecione uma opção de batida de
+                                                        ponto</li>
+                                                    <li data-i18n="acc5.step2.info3">As opções de batida de ponto podem
+                                                        ser alteradas pelo administrador na configuração do ponto do
+                                                        colaborador ou da holding
+                                                    </li>
+                                                    <li data-i18n="acc5.step2.info5">Para utilizar a batida por
+                                                        Reconhecimento Facial, o Administrador de Recursos Humanos deve
+                                                        ter cadastrado a face do colaborador no app ClockIn Register
+                                                        previamente. Se o registro for feito depois que o colaborador já
+                                                        tiver acessado o app ClockIn Single, é necessário que o
+                                                        colaborador faça login novamente para atualizar a base de faces
+                                                    </li>
+                                                    <li data-i18n="acc5.step2.info6">Ponto registrado com sucesso!</li>
+                                                </ul>
+                                            </div>
+                                            <div class="step-highlight">
+                                                <span class="step-highlight-icon">🎉</span>
+                                                <p class="step-highlight-text" data-i18n="acc5.step2.highlight">
+                                                    Parabéns! Seu sistema Clockin.It está completamente configurado e
+                                                    funcionando. Os registros de ponto podem ser visualizados e
+                                                    gerenciados
+                                                    através do painel administrativo na web.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <!-- <h2 class="cta-title" data-i18n="cta.title">Precisa de Ajuda?</h2>
+                <p class="cta-description" data-i18n="cta.description">Nossa equipe de suporte está pronta para ajudar
+                    você em qualquer etapa da configuração</p> -->
+                <div class="cta-buttons">
+                    <!-- <a href="mailto:suporte@seusite.com.br?subject=Ajuda%20com%20Configuração" class="btn btn-primary"
+                        data-i18n="cta.btn_support">Contatar Suporte</a> -->
+                    <a href="../index.html" class="btn btn-secondary" data-i18n="cta.btn_home">Voltar a Página
+                        Inicial</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-copyright" data-i18n="footer.copyright">© 2026 ClockIn.IT. Todos os direitos
+                    reservados.</p>
+                <div class="footer-links">
+                    <a href="../politicaPrivacidade/index.html" class="footer-link"
+                        data-i18n="footer.privacy">Privacidade</a>
+                    <a href="../termosUso/index.html" class="footer-link" data-i18n="footer.terms">Termos de Uso</a>
+                    <a href="../tutorial/index.html" class="footer-link" data-i18n="footer.tutorial">Tutorial</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
