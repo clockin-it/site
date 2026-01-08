@@ -95,8 +95,26 @@ code {
 }
 
 .language-selector {
-    display: flex;
-    gap: 8px;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: Poppins, sans-serif;
+    outline: none;
+    background-color: transparent;
+}
+
+.language-selector option {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Cor do seletor quando navbar está sticky (fundo branco) */
+.sticky .language-selector {
+    color: #2e2e2e;
 }
 
 .lang-btn {
@@ -836,7 +854,7 @@ code {
     border-radius: 10px;
     border: 1px solid #FCD34D;
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 12px;
     margin-top: 16px;
 }
@@ -1021,10 +1039,11 @@ code {
     border-radius: 10%;
     font-size: 20px;
     box-shadow: 0 4px 12px rgba(135, 203, 48, 0.4);
-    z-index: 100;
+    z-index: 9999;
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
+    display: block !important;
     text-decoration: none;
 }
 

@@ -7,17 +7,17 @@ const translations = {
         "hero.compliance": "Portaria nº 671/2021 MTP",
 
         // Content
-        "content.intro": "Bem-vindo ao sistema <strong>ClockInIT REP-P</strong>. Estes Termos de Uso regem o acesso e uso da nossa plataforma de Registro Eletrônico de Ponto via Programa. AO ACESSAR OU UTILIZAR NOSSO SERVIÇO, VOCÊ MANIFESTA SUA ACEITAÇÃO E CONCORDÂNCIA EXPRESSA COM ESTES TERMOS.",
+        "content.intro": "Bem-vindo ao sistema <strong>ClockInIT REP-P</strong>. Estes Termos de Uso regem o acesso e uso da nossa plataforma de Marcação Eletrônica de Ponto via Programa. AO ACESSAR OU UTILIZAR NOSSO SERVIÇO, VOCÊ MANIFESTA SUA ACEITAÇÃO E CONCORDÂNCIA EXPRESSA COM ESTES TERMOS.",
 
         // Section 1
         "sec1.title": "1. OBJETO",
-        "sec1.desc": "Estes Termos têm por objeto reger o acesso e a utilização do software ClockInIT REP-P, um sistema SaaS (Software as a Service) para <strong>Registro Eletrônico de Ponto via Programa (REP-P)</strong>, devidamente homologado e em estrita conformidade com a Portaria nº 671/2021 do Ministério do Trabalho e Previdência (MTP).",
+        "sec1.desc": "Estes Termos têm por objeto reger o acesso e a utilização do software ClockInIT REP-P, um sistema SaaS (Software as a Service) para <strong>Marcação Eletrônica de Ponto via Programa (REP-P)</strong>, devidamente homologado e em estrita conformidade com a Portaria nº 671/2021 do Ministério do Trabalho e Previdência (MTP).",
         "sec1.purpose_title": "Finalidade do Serviço",
-        "sec1.purpose_desc": "O Serviço visa permitir a marcação segura, auditável e íntegra da jornada de trabalho, gerando o Comprovante de Registro de Ponto do Trabalhador e o Arquivo Fonte de Dados (AFD) para fins fiscais e trabalhistas.",
+        "sec1.purpose_desc": "O Serviço visa permitir a marcação segura, auditável e íntegra da jornada de trabalho, gerando o Comprovante de Marcação de Ponto do Trabalhador e o Arquivo Fonte de Dados (AFD) para fins fiscais e trabalhistas.",
 
         // Section 2
         "sec2.title": "2. LICENÇA DE USO",
-        "sec2.intro": "O software ClockInIT REP-P é de propriedade intelectual da CLOCK IN IT LTDA. Concedemos ao Usuário uma licença pessoal, mundial, revogável, não exclusiva, intransferível e limitada para acessar e usar o software estritamente para fins profissionais de registro de ponto.",
+        "sec2.intro": "O software ClockInIT REP-P é de propriedade intelectual da CLOCK IN IT LTDA. Concedemos ao Usuário uma licença pessoal, mundial, revogável, não exclusiva, intransferível e limitada para acessar e usar o software estritamente para fins profissionais de marcação de ponto.",
         "sec2.restrictions_title": "2.1 Restrições de Uso",
         "sec2.restrictions_intro": "Esta licença não confere ao Usuário o direito de:",
         "sec2.rest1": "Copiar, modificar, distribuir, vender, alugar ou sublicenciar qualquer parte dos serviços ou softwares da ClockInIT;",
@@ -27,9 +27,9 @@ const translations = {
 
         // Section 3
         "sec3.title": "3. DEVERES E RESPONSABILIDADES DO USUÁRIO",
-        "sec3.intro": "O Usuário se compromete a utilizar o Serviço de forma ética e legal, em conformidade com estes Termos e a legislação trabalhista vigente. Para manter a integridade e a validade jurídica do registro de ponto, o Usuário deve:",
+        "sec3.intro": "O Usuário se compromete a utilizar o Serviço de forma ética e legal, em conformidade com estes Termos e a legislação trabalhista vigente. Para manter a integridade e a validade jurídica da marcação de ponto, o Usuário deve:",
         "sec3.veracity_title": "3.1 Veracidade e Pessoalidade",
-        "sec3.veracity_desc": "Registrar apenas a sua própria jornada de trabalho. O registro de ponto por terceiros ou para terceiros é considerado <strong>fraude trabalhista grave</strong>, conforme o Art. 4º da Portaria nº 671/2021.",
+        "sec3.veracity_desc": "Marcar apenas a sua própria jornada de trabalho. A marcação de ponto por terceiros ou para terceiros é considerado <strong>fraude trabalhista grave</strong>, conforme o Art. 4º da Portaria nº 671/2021.",
         "sec3.credentials_title": "3.2 Credenciais de Acesso",
         "sec3.credentials_desc": "Manter sua senha e dados de login confidenciais e seguros. O Usuário é o único responsável por todas as atividades realizadas em sua conta.",
         "sec3.devices_title": "3.3 Dispositivos (BYOD)",
@@ -43,7 +43,7 @@ const translations = {
         "sec4.violation": "O Usuário violou estes Termos ou a legislação trabalhista;",
         "sec4.fraud": "O Usuário está utilizando o Serviço para fins fraudulentos;",
         "sec4.damage": "A conduta do Usuário causa danos, riscos de segurança ou responsabilidade para a ClockInIT, seu Empregador ou outros usuários.",
-        "sec4.logs": "Nesses casos, os logs de auditoria e os dados de registro serão preservados e disponibilizados ao Empregador para as devidas providências legais e disciplinares.",
+        "sec4.logs": "Nesses casos, os logs de auditoria e os dados de marcação serão preservados e disponibilizados ao Empregador para as devidas providências legais e disciplinares.",
 
         // Section 5
         "sec5.title": "5. DISPONIBILIDADE E MANUTENÇÃO",
@@ -57,10 +57,10 @@ const translations = {
 
         // Section 6
         "sec6.title": "6. LIMITAÇÃO DE RESPONSABILIDADE",
-        "sec6.intro": "A ClockInIT atua exclusivamente como fornecedora da <strong>ferramenta tecnológica</strong> de registro de ponto. A ClockInIT <strong>NÃO</strong> é responsável por:",
+        "sec6.intro": "A ClockInIT atua exclusivamente como fornecedora da <strong>ferramenta tecnológica</strong> de marcação de ponto. A ClockInIT <strong>NÃO</strong> é responsável por:",
         "sec6.disputes": "Disputas trabalhistas, cálculo de horas extras, descontos ou pagamentos. A gestão da relação de trabalho é de responsabilidade exclusiva do Empregador.",
-        "sec6.validation": "Validar se os horários registrados estão em conformidade com o contrato de trabalho individual do Usuário.",
-        "sec6.failures": "Falhas de registro causadas por mau uso do dispositivo ou falta de permissões (GPS/Câmera) por parte do Usuário.",
+        "sec6.validation": "Validar se os horários marcados estão em conformidade com o contrato de trabalho individual do Usuário.",
+        "sec6.failures": "Falhas de marcação causadas por mau uso do dispositivo ou falta de permissões (GPS/Câmera) por parte do Usuário.",
         "sec6.extent": "Na extensão máxima permitida pela lei, a ClockInIT não será responsável por danos indiretos, lucros cessantes ou perda de dados decorrentes do uso inadequado ou não autorizado do sistema.",
 
         // Section 7
@@ -315,7 +315,6 @@ let currentLang = localStorage.getItem('clockinit_lang') || 'pt';
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
     initLanguage();
-    initLanguageButtons();
     initBackToTop();
 });
 
@@ -326,37 +325,7 @@ function initLanguage() {
         currentLang = savedLang;
     }
 
-    // Update active button state
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
     updateLanguage(currentLang);
-}
-
-// Initialize language selector buttons
-function initLanguageButtons() {
-    const langButtons = document.querySelectorAll('.lang-btn');
-
-    langButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const lang = this.getAttribute('data-lang');
-            if (lang && translations[lang]) {
-                currentLang = lang;
-                localStorage.setItem('clockinit_lang', lang);
-                updateLanguage(lang);
-
-                // Update active state
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
 }
 
 // Update page content with translations
@@ -375,12 +344,28 @@ function updateLanguage(lang) {
 
     // Update page title
     const titles = {
-        pt: 'Termos de Uso - ClockIn.IT',
-        en: 'Terms of Use - ClockIn.IT',
-        es: 'Términos de Uso - ClockIn.IT'
+        pt: 'ClockIn.IT - Termos de Uso',
+        en: 'ClockIn.IT - Terms of Use',
+        es: 'ClockIn.IT - Términos de Uso'
     };
     document.title = titles[lang];
+
+    // Update select with current language
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.value = lang;
+    }
+
+    // Save language preference
+    localStorage.setItem('clockinit_lang', lang);
 }
+
+// Function to change language via select
+function changeLanguage(lang) {
+    updateLanguage(lang);
+}
+
+window.changeLanguage = changeLanguage;
 
 // Back to top button functionality
 function initBackToTop() {

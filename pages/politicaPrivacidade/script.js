@@ -136,7 +136,7 @@ const translations = {
         "sec11.name_label": "Nome:",
         "sec11.name": "Diogo da Silva de Paula",
         "sec11.email_label": "E-mail:",
-        "sec11.email_value": "depaulatrabalhos@gmail.com",
+        "sec11.email_value": "dpo@clockin.it",
 
         // Contact
         "contact.title": "12. CONTATO E INFORMAÇÕES INSTITUCIONAIS",
@@ -170,6 +170,7 @@ const translations = {
 
         // Content
         "content.intro": "<strong>ClockInIT</strong> is committed to the security and privacy of its users' data. This Privacy Policy describes how we collect, use, store, and protect your personal information when using our Electronic Time Recording via Program (REP-P) system.",
+        "content.compliance": "This policy was prepared in strict compliance with the General Data Protection Law (Law No. 13.709/2018 - <strong>LGPD</strong>) and Ordinance No. 671/2021 of the Ministry of Labor and Social Security (MTP), reflecting our commitment to transparency and legality.",
 
         // Section 1
         "sec1.title": "1. IMPORTANT DEFINITIONS",
@@ -184,6 +185,8 @@ const translations = {
         "sec1.operator_desc": "Natural or legal person that processes personal data on behalf of the controller. In this case, <strong>ClockInIT</strong>.",
         "sec1.processing": "1.5 Processing:",
         "sec1.processing_desc": "Any operation performed with personal data, such as collection, production, reception, classification, use, access, reproduction, transmission, distribution, processing, archiving, storage, elimination, evaluation or control of information.",
+        "sec1.dpo": "1.6 Data Protection Officer (DPO):",
+        "sec1.dpo_desc": "Person appointed by the controller and operator to act as a communication channel between the controller, data subjects and the National Data Protection Authority (ANPD).",
 
         // Section 2
         "sec2.title": "2. DATA COLLECTED",
@@ -213,6 +216,7 @@ const translations = {
         // Section 3 - Table
         "sec3.title": "3. PURPOSE AND LEGAL BASIS FOR PROCESSING",
         "sec3.intro": "The processing of your personal data is always based on a legal basis provided for in LGPD, as detailed below:",
+        "sec3.table_title": "Table 1 - Purpose and Legal Basis for Data Processing",
         "table.purpose": "Purpose",
         "table.legal_basis": "Legal Basis (LGPD)",
         "table.row1_purpose": "Electronic Time Recording",
@@ -296,7 +300,7 @@ const translations = {
         "sec11.name_label": "Name:",
         "sec11.name": "Diogo da Silva de Paula",
         "sec11.email_label": "Email:",
-        "sec11.email_value": "depaulatrabalhos@gmail.com",
+        "sec11.email_value": "dpo@clockin.it",
 
         // Contact
         "contact.title": "12. CONTACT AND INSTITUTIONAL INFORMATION",
@@ -330,6 +334,7 @@ const translations = {
 
         // Content
         "content.intro": "<strong>ClockInIT</strong> se compromete con la seguridad y privacidad de los datos de sus usuarios. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos su información personal al utilizar nuestro sistema de Registro Electrónico de Tiempo vía Programa (REP-P).",
+        "content.compliance": "Esta política fue elaborada en estricta conformidad con la Ley General de Protección de Datos Personales (Ley nº 13.709/2018 - <strong>LGPD</strong>) y la Ordenanza nº 671/2021 del Ministerio de Trabajo y Previsión (MTP), reflejando nuestro compromiso con la transparencia y la legalidad.",
 
         // Section 1
         "sec1.title": "1. DEFINICIONES IMPORTANTES",
@@ -344,6 +349,8 @@ const translations = {
         "sec1.operator_desc": "Persona natural o jurídica que realiza el tratamiento de datos personales en nombre del controlador. En este caso, <strong>ClockInIT</strong>.",
         "sec1.processing": "1.5 Tratamiento:",
         "sec1.processing_desc": "Toda operación realizada con datos personales, como recopilación, producción, recepción, clasificación, utilización, acceso, reproducción, transmisión, distribución, procesamiento, archivo, almacenamiento, eliminación, evaluación o control de la información.",
+        "sec1.dpo": "1.6 Encargado de Protección de Datos (DPO):",
+        "sec1.dpo_desc": "Persona designada por el controlador y operador para actuar como canal de comunicación entre el controlador, los titulares de datos y la Autoridad Nacional de Protección de Datos (ANPD).",
 
         // Section 2
         "sec2.title": "2. DATOS RECOPILADOS",
@@ -373,6 +380,7 @@ const translations = {
         // Section 3 - Table
         "sec3.title": "3. FINALIDAD Y BASE LEGAL DEL TRATAMIENTO",
         "sec3.intro": "El tratamiento de sus datos personales se realiza siempre fundamentado en una base legal prevista en LGPD, como se detalla a continuación:",
+        "sec3.table_title": "Tabla 1 - Finalidad y Base Legal del Tratamiento de Datos",
         "table.purpose": "Finalidad",
         "table.legal_basis": "Base Legal (LGPD)",
         "table.row1_purpose": "Registro de Tiempo Electrónico",
@@ -456,7 +464,7 @@ const translations = {
         "sec11.name_label": "Nombre:",
         "sec11.name": "Diogo da Silva de Paula",
         "sec11.email_label": "Correo electrónico:",
-        "sec11.email_value": "depaulatrabalhos@gmail.com",
+        "sec11.email_value": "dpo@clockin.it",
 
         // Contact
         "contact.title": "12. CONTACTO E INFORMACIÓN INSTITUCIONAL",
@@ -488,7 +496,6 @@ let currentLang = localStorage.getItem('clockinit_lang') || 'pt';
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function () {
     initLanguage();
-    initLanguageButtons();
     initBackToTop();
 });
 
@@ -499,37 +506,7 @@ function initLanguage() {
         currentLang = savedLang;
     }
 
-    // Update active button state
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
     updateLanguage(currentLang);
-}
-
-// Initialize language selector buttons
-function initLanguageButtons() {
-    const langButtons = document.querySelectorAll('.lang-btn');
-
-    langButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const lang = this.getAttribute('data-lang');
-            if (lang && translations[lang]) {
-                currentLang = lang;
-                localStorage.setItem('clockinit_lang', lang);
-                updateLanguage(lang);
-
-                // Update active state
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
 }
 
 // Update page content with translations
@@ -548,12 +525,28 @@ function updateLanguage(lang) {
 
     // Update page title
     const titles = {
-        pt: 'Política de Privacidade - ClockIn.IT',
-        en: 'Privacy Policy - ClockIn.IT',
-        es: 'Política de Privacidad - ClockIn.IT'
+        pt: 'ClockIn.IT - Política de Privacidade',
+        en: 'ClockIn.IT - Privacy Policy',
+        es: 'ClockIn.IT - Política de Privacidad'
     };
     document.title = titles[lang];
+
+    // Update select with current language
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.value = lang;
+    }
+
+    // Save language preference
+    localStorage.setItem('clockinit_lang', lang);
 }
+
+// Function to change language via select
+function changeLanguage(lang) {
+    updateLanguage(lang);
+}
+
+window.changeLanguage = changeLanguage;
 
 // Back to top button functionality
 function initBackToTop() {
