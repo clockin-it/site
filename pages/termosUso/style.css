@@ -171,8 +171,25 @@ code {
 }
 
 .language-selector {
-    display: flex;
-    gap: 8px;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: Poppins, sans-serif;
+    outline: none;
+    background-color: transparent;
+}
+
+.language-selector option {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.sticky .language-selector {
+    color: #2e2e2e;
 }
 
 .lang-btn {
@@ -252,10 +269,23 @@ code {
     z-index: 1;
 }
 
+.hero-description {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
 .hero-meta {
     display: flex;
+    justify-content: center;
     gap: 2rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.9);
     position: relative;
     z-index: 1;
@@ -277,7 +307,7 @@ code {
 
 .content-section {
     padding: 4rem 0;
-    background: white;
+    background: #F8FAFC;
 }
 
 .content-wrapper {

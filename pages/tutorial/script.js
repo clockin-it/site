@@ -69,7 +69,7 @@ const translations = {
         "acc4.step1.info5": "Um email com código de ativação será enviado para o email do colaborador",
         "acc4.step1.info6": "Insira o código recebido por email",
         "acc4.step1.info7": "Defina sua senha de acesso",
-        "acc4.step1.highlight": "Importante: Use boa iluminação e tire fotos de frente. Evite usar óculos escuros, bonés ou qualquer acessório que cubra o rosto para garantir melhor reconhecimento facial.",
+        "acc4.step1.highlight": "Importante: Use boa iluminação e tire fotos de frente. Escolha um local com fundo neutro, evite usar óculos escuros, bonés ou qualquer acessório que cubra o rosto para garantir melhor reconhecimento facial. O app Register pode demorar um pouco para liberar o botão de confirmar, isso acontece porque ele está buscando a melhor qualidade de imagem possível do colaborador.",
         "acc4.step2.title": "Sincronizar Face IDs",
         "acc4.step2.desc": "Depois que os colaboradores cadastrarem suas fotos no app Register, é necessário sincronizar essas informações com o app Multiple para que o reconhecimento facial funcione.",
         "acc4.step2.info_title": "Como sincronizar:",
@@ -84,9 +84,9 @@ const translations = {
         "acc4.step3.info1": "Aproxime-se do dispositivo com o app ClockIn Multi",
         "acc4.step3.info2": "Posicione seu rosto na frente da câmera",
         "acc4.step3.info3": "O sistema reconhecerá automaticamente seu rosto",
-        "acc4.step3.info4": "Confirme o tipo de registro (entrada ou saída, esta opção aparecerá se estiver ativada na configuração do ponto)",
-        "acc4.step3.info5": "Ponto registrado com sucesso!",
-        "acc4.step3.highlight": "Parabéns! Seu sistema Clockin.It está completamente configurado e funcionando. Os registros de ponto podem ser visualizados e gerenciados através do painel administrativo na web.",
+        "acc4.step3.info4": "Confirme o tipo de marcação (entrada ou saída, esta opção aparecerá se estiver ativada na configuração do ponto)",
+        "acc4.step3.info5": "Ponto marcado com sucesso!",
+        "acc4.step3.highlight": "Parabéns! Seu sistema Clockin.It está completamente configurado e funcionando. As marcações de ponto podem ser visualizadas e gerenciadas através do painel administrativo na web.",
 
         // Accordion 5: Cadastro de Coletor Individual [COLABORADOR]
         "acc5.title": "Cadastro de Coletor Individual [COLABORADOR]",
@@ -104,12 +104,12 @@ const translations = {
         "acc5.step2.title": "Registrar Ponto",
         "acc5.step2.desc": "Com tudo configurado, o colaborador já pode registrar seus pontos de entrada e saída usando as diversas maneiras que o app Clockinit Single oferece.",
         "acc5.step2.info_title": "Como bater ponto:",
-        "acc5.step2.info1": "Selecione a opção de registro desejada entrada ou saída",
-        "acc5.step2.info2": "Selecione uma opção de batida de ponto",
-        "acc5.step2.info3": "As opções de batida de ponto podem ser alteradas pelo administrador na configuração do ponto do colaborador ou da holding",
-        "acc5.step2.info5": "Para utilizar a batida por Reconhecimento Facial, o Administrador de Recursos Humanos deve ter cadastrado a face do colaborador no app ClockIn Register previamente. Se o registro for feito depois que o colaborador já tiver acessado o app ClockIn Single, é necessário que o colaborador faça login novamente para atualizar a base de faces",
-        "acc5.step2.info6": "Ponto registrado com sucesso!",
-        "acc5.step2.highlight": "Parabéns! Seu sistema Clockin.It está completamente configurado e funcionando. Os registros de ponto podem ser visualizados e gerenciados através do painel administrativo na web.",
+        "acc5.step2.info1": "Selecione a opção de marcação desejada entrada ou saída",
+        "acc5.step2.info2": "Selecione uma opção de marcação de ponto",
+        "acc5.step2.info3": "As opções de marcação de ponto podem ser alteradas pelo administrador na configuração do ponto do colaborador ou da holding",
+        "acc5.step2.info5": "Para utilizar a marcação por Reconhecimento Facial, o Administrador de Recursos Humanos deve ter cadastrado a face do colaborador no app ClockIn Register previamente. Se o cadastro for feito depois que o colaborador já tiver acessado o app ClockIn Single, é necessário que o colaborador faça login novamente para atualizar a base de faces",
+        "acc5.step2.info6": "Ponto marcado com sucesso!",
+        "acc5.step2.highlight": "Parabéns! Seu sistema Clockin.It está completamente configurado e funcionando. As marcações de ponto podem ser visualizadas e gerenciadas através do painel administrativo na web.",
 
         // CTA
         "cta.title": "Precisa de Ajuda?",
@@ -194,7 +194,7 @@ const translations = {
         "acc4.step1.info5": "An email with activation code will be sent to the employee's email",
         "acc4.step1.info6": "Enter the code received by email",
         "acc4.step1.info7": "Set your access password",
-        "acc4.step1.highlight": "Important: Use good lighting and take photos facing forward. Avoid using sunglasses, hats or any accessory that covers the face to ensure better facial recognition.",
+        "acc4.step1.highlight": "Important: Use good lighting and take front-facing photos. Choose a location with a neutral background, avoid using sunglasses, hats or any accessory that covers the face to ensure better facial recognition. The Register app may take a while to enable the confirm button, this happens because it is searching for the best possible image quality of the employee.",
         "acc4.step2.title": "Sync Face IDs",
         "acc4.step2.desc": "After employees register their photos in the Register app, it's necessary to sync this information with the Multiple app for facial recognition to work.",
         "acc4.step2.info_title": "How to sync:",
@@ -319,7 +319,7 @@ const translations = {
         "acc4.step1.info5": "Se enviará un email con el código de activación al email del colaborador",
         "acc4.step1.info6": "Ingrese el código recibido por email",
         "acc4.step1.info7": "Defina su contraseña de acceso",
-        "acc4.step1.highlight": "Importante: Use buena iluminación y tome fotos de frente. Evite usar gafas oscuras, gorras o cualquier accesorio que cubra el rostro para garantizar un mejor reconocimiento facial.",
+        "acc4.step1.highlight": "Importante: Use buena iluminación y tome fotos de frente. Elija un lugar con fondo neutro, evite usar gafas oscuras, gorras o cualquier accesorio que cubra el rostro para garantizar un mejor reconocimiento facial. La app Register puede demorar un poco en habilitar el botón de confirmar, esto sucede porque está buscando la mejor calidad de imagen posible del colaborador.",
         "acc4.step2.title": "Sincronizar Face IDs",
         "acc4.step2.desc": "Después de que los colaboradores registren sus fotos en la app Register, es necesario sincronizar esta información con la app Multiple para que funcione el reconocimiento facial.",
         "acc4.step2.info_title": "Cómo sincronizar:",
@@ -407,15 +407,11 @@ function updatePageContent() {
 }
 
 function updateLanguageButtons() {
-    const buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(btn => {
-        const btnLang = btn.getAttribute('data-lang');
-        if (btnLang === currentLanguage) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
+    // Update the select element with current language
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.value = currentLanguage;
+    }
 }
 
 // Accordion Management
@@ -534,22 +530,26 @@ function scrollToAccordions() {
 
 window.scrollToAccordions = scrollToAccordions;
 
+// Function to change language via select
+function changeLanguage(lang) {
+    setLanguage(lang);
+}
+
+window.changeLanguage = changeLanguage;
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial language
     setLanguage(currentLanguage);
 
+    // Update select with current language
+    const languageSelector = document.getElementById('language-selector');
+    if (languageSelector) {
+        languageSelector.value = currentLanguage;
+    }
+
     // Load state from URL (deep linking)
     loadStateFromURL();
-
-    // Setup language buttons
-    const languageButtons = document.querySelectorAll('.lang-btn');
-    languageButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
-            setLanguage(lang);
-        });
-    });
 
     // Add keyboard navigation for accordions
     document.querySelectorAll('.accordion-header').forEach(header => {
@@ -564,27 +564,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Back to top button functionality
-    const backToTopButton = document.querySelector('.back-to-top');
+    // const backToTopButton = document.querySelector('.back-to-top');
 
-    if (backToTopButton) {
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('active');
-            } else {
-                backToTopButton.classList.remove('active');
-            }
-        });
+    // if (backToTopButton) {
+    //     // Show/hide button based on scroll position
+    //     window.addEventListener('scroll', () => {
+    //         if (window.pageYOffset > 300) {
+    //             backToTopButton.classList.add('active');
+    //         } else {
+    //             backToTopButton.classList.remove('active');
+    //         }
+    //     });
 
-        // Smooth scroll to top on click
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+    //     // Smooth scroll to top on click
+    //     backToTopButton.addEventListener('click', (e) => {
+    //         e.preventDefault();
+    //         window.scrollTo({
+    //             top: 0,
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // }
 });
 
 // Export for testing (optional)
